@@ -99,6 +99,46 @@
 .footer-bottom{display:flex;justify-content:space-between;gap:18px;border-top:1px solid #ffffff14;margin-top:22px;padding-top:17px;color:#99998e;font-size:9px;letter-spacing:.03em}
 @media(max-width:760px){.premium-contact{padding:45px 6% 22px}.contact-topline{align-items:flex-start;flex-direction:column;gap:9px}.premium-contact-grid{grid-template-columns:1fr;gap:38px;padding:35px 0 40px}.premium-contact-details{border-left:0;border-top:1px solid #ffffff20;padding:24px 0 0}.detail-value{font-size:26px}.detail-mail{font-size:15px}.footer-links{justify-content:flex-start;flex-wrap:wrap;margin-top:24px;gap:16px}.footer-bottom{flex-direction:column;gap:8px}.premium-contact-copy h2{font-size:clamp(43px,11vw,64px)}}
 
+
+/* Compact, full-width black footer */
+.premium-contact{display:block!important;width:100%;box-sizing:border-box;background:#050505!important;color:#f5f2ec;padding:32px 5% 12px!important;margin:0!important}
+.premium-contact:before{right:-180px;top:-230px;width:380px;height:380px;border-color:#ffffff0a;box-shadow:0 0 0 45px #ffffff03,0 0 0 90px #ffffff02}
+.contact-topline{padding-bottom:12px}
+.contact-index{font-size:8px}
+.premium-contact-grid{grid-template-columns:1.15fr .85fr;gap:6%;padding:25px 0 28px}
+.premium-contact-copy h2{font-size:clamp(36px,4.3vw,54px);line-height:1;max-width:550px;margin-bottom:12px}
+.premium-contact-copy>p{font-size:11px;line-height:1.7;max-width:470px}
+.premium-contact-actions{margin-top:18px;gap:20px}
+.premium-call{padding:12px 15px;min-width:125px;font-size:9px}
+.premium-email{font-size:9px}
+.premium-contact-details{padding-left:24px}
+.detail-row{padding:4px 0 13px;margin-bottom:10px}
+.detail-label{font-size:8px;margin-bottom:7px}
+.detail-value{font-size:22px}
+.detail-mail{font-size:14px}
+.detail-hint{font-size:9px;margin-top:5px}
+.detail-note{font-size:9px}
+.footer-faq{border-top:1px solid #ffffff20;border-bottom:1px solid #ffffff20;padding:14px 0 16px;position:relative}
+.footer-faq-title{display:flex;align-items:baseline;gap:12px;margin-bottom:10px}
+.footer-faq-title span{font-size:8px;letter-spacing:.15em;color:#dca083}
+.footer-faq-title strong{font:normal 20px Georgia,serif;color:#f5f2ec}
+.footer-faq-items{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.footer-faq-items details{border-top:1px solid #ffffff24;padding-top:8px;min-width:0}
+.footer-faq-items summary{cursor:pointer;list-style:none;font-size:10px;line-height:1.4;color:#f1eee7}
+.footer-faq-items summary::-webkit-details-marker{display:none}
+.footer-faq-items summary:after{content:"+";float:right;color:#dca083;margin-left:6px}
+.footer-faq-items details[open] summary:after{content:"−"}
+.footer-faq-items p{font-size:9px;line-height:1.6;color:#aaa99f;margin:8px 0 0}
+.premium-footer{padding-top:14px}
+.footer-monogram{width:32px;height:32px;font-size:19px}
+.footer-brand-name{font-size:9px;gap:2px}
+.footer-brand-name small{font-size:6px;margin-top:2px}
+.footer-links{gap:17px;margin-top:-24px}
+.footer-links a{font-size:8px}
+.footer-bottom{margin-top:13px;padding-top:10px;font-size:8px}
+@media(max-width:760px){.premium-contact{padding:28px 6% 12px!important}.contact-topline{gap:7px}.premium-contact-grid{grid-template-columns:1fr;gap:22px;padding:24px 0}.premium-contact-copy h2{font-size:clamp(37px,10vw,48px)}.premium-contact-details{border-left:0;border-top:1px solid #ffffff20;padding:18px 0 0}.detail-value{font-size:22px}.detail-mail{font-size:14px}.footer-faq-items{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.footer-links{justify-content:flex-start;flex-wrap:wrap;margin-top:18px;gap:14px}.footer-bottom{flex-direction:column;gap:6px}.footer-faq-title strong{font-size:18px}}
+@media(max-width:390px){.footer-faq-items{grid-template-columns:1fr}.contact-index{letter-spacing:.1em}.premium-contact-actions{gap:14px}}
+
 </style>
 </head>
 <body>
@@ -176,13 +216,14 @@
       <div class="detail-note"><span class="detail-dot"></span>Quality finishes. Lasting impressions.</div>
     </div>
   </div>
+  <div class="footer-faq" id="faq"><div class="footer-faq-title"><span>QUICK ANSWERS</span><strong>FAQs</strong></div><div class="footer-faq-items"><details><summary>What is texture paint?</summary><p>Texture finishes add pattern, tactile detail or dimension. The result depends on the material, technique, lighting and colour.</p></details><details><summary>Can textures be used in every room?</summary><p>Suitability depends on the product and room conditions. We can help discuss the right finish for your surface.</p></details><details><summary>Should I test a sample first?</summary><p>Yes. Test it on the intended wall and view it in different lighting before choosing.</p></details><details><summary>What work do you undertake?</summary><p>We undertake all types of painting and texture work. Contact us to discuss your project.</p></details></div></div>
   <div class="premium-footer">
     <a class="footer-brand" href="#"><span class="footer-monogram">P<span>&amp;</span>T</span><span class="footer-brand-name">PAINTERS <b>&amp; TEXTURES</b><small>QUALITY FINISHES. LASTING IMPRESSIONS.</small></span></a>
     <div class="footer-links"><a href="#textures">FINISHES</a><a href="#colour-studio">COLOUR STUDIO</a><a href="#inspiration">INSPIRATION</a><a href="#faq">FAQS</a></div>
     <div class="footer-bottom"><span>Thoughtfully finished. Made to feel like home.</span><span>© <span id="footerYear">2026</span> Painters &amp; Textures</span></div>
   </div>
 </section>
-<section class="section" id="faq"><div class="faq"><div class="eyebrow">A few helpful answers</div><h2 style="margin-bottom:25px">Before you begin.</h2><details><summary>What is texture paint?</summary><p>Texture finishes add visible pattern, tactile detail or dimensional effects. The final appearance depends on the material, application technique, lighting and colour.</p></details><details><summary>Can textures be used in every room?</summary><p>Suitability varies by product and exposure. Confirm the correct finish with the manufacturer or a qualified applicator for each surface.</p></details><details><summary>Should I test a sample first?</summary><p>Yes. Test it on the intended wall and check it at different times of day alongside your flooring, furniture and lighting.</p></details><details><summary>What types of work do you undertake?</summary><p>We take on all types of painting work and texture work. Contact us to discuss your specific project requirements.</p></details></div></section>
+
 </main>
 <script>
 const nav=document.getElementById('nav');document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
