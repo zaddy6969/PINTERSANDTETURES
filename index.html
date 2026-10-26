@@ -217,6 +217,29 @@
 .palette-chip{background:rgba(250,248,242,.24)!important;border-color:rgba(100,94,82,.25)!important}
 .palette-chip.selected{background:rgba(250,248,242,.62)!important;border-color:#292a24!important}
 
+
+/* Replace illustrated mock room with a real photographed interior */
+.room-scene{
+  background:#e7dfd2 url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90") center 54%/cover no-repeat!important;
+  position:relative;isolation:isolate;
+}
+.room-scene .room-ceiling,.room-scene .room-floor,.room-scene .room-rug,
+.room-scene .room-sofa,.room-scene .room-plant,.room-scene .window-frame,.room-scene .wall-art{display:none!important}
+.room-scene .preview-wall{
+  top:0;left:0;right:auto;width:100%;height:72%;
+  background-color:var(--preview-colour,#E9E0D1);
+  background-image:linear-gradient(115deg,#ffffff22,transparent 52%,#00000012);
+  opacity:.68;mix-blend-mode:multiply;
+  clip-path:polygon(0 0,100% 0,100% 82%,78% 100%,0 91%);
+  transition:background-color .25s ease,opacity .25s ease;
+}
+.room-scene .preview-wall:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 45px #00000012;pointer-events:none}
+.room-scene .preview-room{background:linear-gradient(transparent,#11120fce);z-index:7}
+@media(max-width:760px){
+ .room-scene{background-position:center center!important}
+ .room-scene .preview-wall{height:66%;clip-path:polygon(0 0,100% 0,100% 83%,80% 100%,0 92%)}
+}
+
 </style>
 </head>
 <body>
