@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://paintersandtextures.com/#business",
+  "name": "Painters & Textures",
+  "url": "https://paintersandtextures.com/",
+  "telephone": "+917026193396",
+  "email": "paintersandtextures@gmail.com",
+  "description": "Professional painting and texture work with quality finishes and lasting impressions.",
+  "slogan": "Quality Finishes. Lasting Impressions.",
+  "priceRange": "$$",
+  "areaServed": "India",
+  "serviceType": ["Interior painting", "Exterior painting", "Wall texture work", "Decorative finishes", "Residential painting", "Commercial painting"]
+}
