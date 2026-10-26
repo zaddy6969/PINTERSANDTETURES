@@ -29,6 +29,39 @@
 .colour-note{font-size:10px!important;color:var(--muted);line-height:1.7}
 @media(max-width:760px){.colour-studio{grid-template-columns:1fr}.colour-preview{min-height:300px}.colour-controls{padding:0}}
 
+
+/* Room mockup: only the wall changes when a swatch is selected */
+.room-scene{height:430px;min-height:430px;background:#eee7db;overflow:hidden;position:relative;isolation:isolate}
+.room-ceiling{position:absolute;z-index:0;inset:0 0 auto;height:7%;background:#f7f3eb}
+.preview-wall{position:absolute;z-index:1;left:0;right:0;top:7%;height:65%;background-color:var(--preview-colour,#E9E0D1);background-image:linear-gradient(120deg,#ffffff25,transparent 48%,#0000000b);transition:background-color .25s}
+.preview-wall:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 30px #0000000b;pointer-events:none}
+.window-frame{position:absolute;left:8%;top:12%;width:22%;height:62%;background:#f8f5ed;padding:7px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:5px;box-shadow:0 5px 16px #0002}
+.window-pane{background:linear-gradient(135deg,#d9e5e5,#f6f0df 60%,#b6c6c5);border:1px solid #d5d0c4}
+.wall-art{position:absolute;right:13%;top:16%;width:21%;height:32%;padding:8px;background:#f5f0e6;box-shadow:0 5px 14px #0002;display:flex;align-items:center;justify-content:center;gap:5px}
+.wall-art span{height:80%;width:28%;background:#c6b29b}
+.wall-art span:nth-child(2){background:#7f928b;height:65%}
+.wall-art span:nth-child(3){background:#c88b6d;height:48%}
+.room-floor{position:absolute;z-index:2;left:0;right:0;bottom:0;height:30%;background:repeating-linear-gradient(90deg,#c8b49b 0 22%,#b9a58c 22.2% 22.5%,#d0bea6 22.7% 44%);border-top:5px solid #b6a28a}
+.room-rug{position:absolute;z-index:3;bottom:1%;left:20%;width:60%;height:21%;border-radius:50%;background:#d9d0c2;border:7px solid #eee7db;box-shadow:inset 0 0 0 2px #c6b9a5}
+.room-sofa{position:absolute;z-index:4;left:31%;bottom:11%;width:42%;height:28%}
+.sofa-back{position:absolute;left:5%;right:5%;top:0;height:65%;background:#b6a18a;border-radius:15px 15px 6px 6px;box-shadow:inset 0 -5px 0 #a38d76}
+.sofa-seat{position:absolute;left:3%;right:3%;bottom:8%;height:40%;background:#c7b39b;border-radius:8px;box-shadow:inset 0 -4px 0 #aa957e}
+.sofa-arm{position:absolute;top:25%;height:57%;width:13%;background:#b9a48c;border-radius:8px}
+.sofa-arm.left{left:0}.sofa-arm.right{right:0}
+.sofa-leg{position:absolute;bottom:0;width:5px;height:15%;background:#6d5b4a}
+.sofa-leg.left{left:14%}.sofa-leg.right{right:14%}
+.cushion{position:absolute;z-index:1;top:17%;height:37%;width:22%;border-radius:5px;background:#d8c7ad;box-shadow:inset -3px -3px 0 #bca88e}
+.cushion.one{left:23%;transform:rotate(-5deg)}.cushion.two{right:23%;background:#7f928b;transform:rotate(5deg)}
+.room-plant{position:absolute;z-index:4;right:7%;bottom:21%;height:35%;width:12%}
+.plant-stem{position:absolute;left:50%;bottom:22%;height:62%;width:3px;background:#65745d}
+.plant-leaf{position:absolute;bottom:48%;left:50%;width:34%;height:25%;background:#71846a;border-radius:100% 0 100% 0;transform-origin:bottom left}
+.plant-leaf.l1{transform:rotate(-50deg);bottom:56%;left:42%}.plant-leaf.l2{transform:rotate(20deg);bottom:66%}.plant-leaf.l3{transform:rotate(-25deg);bottom:76%;left:35%}.plant-leaf.l4{transform:rotate(45deg);bottom:48%;left:47%;background:#899779}
+.plant-pot{position:absolute;bottom:0;left:25%;width:55%;height:25%;background:#b77d60;clip-path:polygon(10% 0,90% 0,78% 100%,22% 100%)}
+.preview-room{z-index:6;position:absolute;left:0;right:0;bottom:0;padding:20px 24px;background:linear-gradient(transparent,#171813c9);color:white;pointer-events:none}
+.preview-room h3{font:normal 30px Georgia;margin:6px 0 2px}
+.preview-room p{font-size:12px;margin:0;color:#ffffffdf}
+@media(max-width:760px){.room-scene{height:350px;min-height:350px}.room-sofa{left:28%;width:49%}.window-frame{left:5%;width:26%}.wall-art{right:8%;width:23%}}
+
 </style>
 </head>
 <body>
@@ -55,10 +88,18 @@
 <section class="section" id="colour-studio">
   <div class="head"><div><div class="eyebrow">Interactive colour studio</div><h2>Try a colour before you choose.</h2></div><p>Tap a shade or pick your own colour to preview a wall-inspired colour panel. Use it to explore ideas before discussing your finish with us.</p></div>
   <div class="colour-studio">
-    <div class="colour-preview" id="colourPreview" aria-label="Live colour preview">
-      <div class="preview-wall" id="previewWall"></div>
+    <div class="colour-preview room-scene" id="colourPreview" aria-label="Room with live wall colour preview">
+      <div class="room-ceiling"></div>
+      <div class="preview-wall" id="previewWall">
+        <div class="window-frame"><div class="window-pane"></div><div class="window-pane"></div><div class="window-pane"></div><div class="window-pane"></div></div>
+        <div class="wall-art"><span></span><span></span><span></span></div>
+      </div>
+      <div class="room-floor"></div>
+      <div class="room-rug"></div>
+      <div class="room-sofa"><div class="sofa-back"></div><div class="sofa-seat"></div><div class="sofa-arm left"></div><div class="sofa-arm right"></div><div class="sofa-leg left"></div><div class="sofa-leg right"></div><div class="cushion one"></div><div class="cushion two"></div></div>
+      <div class="room-plant"><span class="plant-leaf l1"></span><span class="plant-leaf l2"></span><span class="plant-leaf l3"></span><span class="plant-leaf l4"></span><span class="plant-stem"></span><span class="plant-pot"></span></div>
       <div class="preview-room">
-        <span class="preview-kicker">YOUR COLOUR PREVIEW</span>
+        <span class="preview-kicker">YOUR ROOM COLOUR PREVIEW</span>
         <h3 id="previewName">Warm Linen</h3>
         <p id="previewHex">#E9E0D1</p>
       </div>
