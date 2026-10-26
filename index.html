@@ -189,6 +189,22 @@
  .preview-room{padding:18px}
 }
 
+
+/* More translucent floating colour picker so the room remains visible */
+.colour-controls{
+  background:rgba(250,248,242,.76)!important;
+  border:1px solid rgba(255,255,255,.62)!important;
+  box-shadow:0 10px 34px rgba(25,24,20,.18)!important;
+  -webkit-backdrop-filter:blur(9px) saturate(112%);
+  backdrop-filter:blur(9px) saturate(112%);
+}
+.colour-controls h3{color:rgba(41,42,36,.96)}
+.colour-controls>p,.colour-note{color:rgba(65,64,56,.88)!important}
+.palette-chip{background:rgba(250,248,242,.38)!important;border-color:rgba(130,122,108,.26)!important}
+.palette-chip.selected{background:rgba(250,248,242,.7)!important;border-color:#292a24!important}
+.custom-colour{color:rgba(41,42,36,.92)!important}
+#askColour{background:rgba(41,42,36,.92)!important}
+
 </style>
 </head>
 <body>
