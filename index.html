@@ -139,6 +139,56 @@
 @media(max-width:760px){.premium-contact{padding:28px 6% 12px!important}.contact-topline{gap:7px}.premium-contact-grid{grid-template-columns:1fr;gap:22px;padding:24px 0}.premium-contact-copy h2{font-size:clamp(37px,10vw,48px)}.premium-contact-details{border-left:0;border-top:1px solid #ffffff20;padding:18px 0 0}.detail-value{font-size:22px}.detail-mail{font-size:14px}.footer-faq-items{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.footer-links{justify-content:flex-start;flex-wrap:wrap;margin-top:18px;gap:14px}.footer-bottom{flex-direction:column;gap:6px}.footer-faq-title strong{font-size:18px}}
 @media(max-width:390px){.footer-faq-items{grid-template-columns:1fr}.contact-index{letter-spacing:.1em}.premium-contact-actions{gap:14px}}
 
+
+/* Enlarged premium colour studio with compact floating controls */
+#colour-studio{padding-top:clamp(54px,7vw,96px);padding-bottom:clamp(54px,7vw,96px)}
+#colour-studio>.head{margin-bottom:26px;align-items:end}
+#colour-studio>.head h2{font-size:clamp(38px,5vw,62px);letter-spacing:-.045em;max-width:760px}
+#colour-studio>.head p{max-width:370px;font-size:12px;line-height:1.85}
+.colour-studio{display:block!important;position:relative;width:100%;min-height:clamp(510px,55vw,690px);overflow:hidden;background:#eae4d9;box-shadow:0 24px 70px #28251d16}
+.colour-preview.room-scene{width:100%;height:clamp(510px,55vw,690px);min-height:clamp(510px,55vw,690px);position:relative}
+.room-scene .preview-wall{background-image:linear-gradient(120deg,#ffffff24,transparent 48%,#0000000c);transition:background-color .28s ease}
+.room-scene .window-frame{left:8%;width:23%;height:63%;top:12%}
+.room-scene .wall-art{right:17%;width:18%;height:29%;top:14%}
+.room-sofa{left:29%;width:45%;height:32%;bottom:10%}
+.room-rug{left:15%;width:70%;height:24%}
+.room-plant{right:6%;height:39%;width:12%;bottom:20%}
+.preview-room{padding:25px 30px 28px;background:linear-gradient(transparent,#10110fd9)}
+.preview-kicker{font-size:9px;letter-spacing:.19em}
+.preview-room h3{font-size:clamp(28px,3vw,42px);margin:7px 0 3px}
+.preview-room p{font-size:12px;letter-spacing:.06em}
+.colour-controls{position:absolute;z-index:10;right:18px;top:50%;transform:translateY(-50%);width:min(255px,27%);box-sizing:border-box;padding:18px 16px 15px;background:#faf8f2f2;border:1px solid #ffffffd9;box-shadow:0 12px 40px #1d1b1730;backdrop-filter:blur(14px);border-radius:3px}
+.colour-controls h3{font:normal 23px Georgia,serif;letter-spacing:-.03em;margin:0 0 5px;color:#292a24}
+.colour-controls>p{font-size:10px;line-height:1.6;margin:0;color:#777368}
+.palette-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:13px 0 10px}
+.palette-chip{gap:7px;padding:6px 7px;font-size:9px;min-width:0;border-color:#ded9cf;color:#292a24;line-height:1.2}
+.palette-chip span{width:18px;height:18px}
+.palette-chip.selected{border-color:#292a24;box-shadow:inset 0 0 0 1px #292a24}
+.custom-colour{font-size:10px;padding:7px 0 10px;color:#45443d}
+.custom-colour input{width:39px;height:28px}
+#askColour{display:flex;justify-content:center;align-items:center;width:100%;box-sizing:border-box;padding:11px 7px;background:#292a24;color:#fff;font-size:8px;letter-spacing:.07em;text-align:center;border:1px solid #292a24}
+.colour-note{font-size:8px!important;line-height:1.5;margin:9px 0 0;color:#777368}
+@media(max-width:760px){
+ #colour-studio>.head{display:block}
+ #colour-studio>.head h2{font-size:clamp(34px,8vw,48px)}
+ #colour-studio>.head p{margin-top:10px}
+ .colour-studio{min-height:620px}
+ .colour-preview.room-scene{height:620px;min-height:620px}
+ .colour-controls{top:auto;bottom:14px;right:12px;transform:none;width:min(280px,calc(100% - 24px));padding:13px}
+ .colour-controls h3{font-size:20px}
+ .palette-options{gap:5px;margin:9px 0}
+ .palette-chip{font-size:9px;padding:5px 7px}
+ .palette-chip span{width:17px;height:17px}
+ .custom-colour{padding:4px 0 7px}
+ .colour-note{margin-top:6px}
+ .room-scene .window-frame{left:6%;width:29%;height:55%}
+ .room-scene .wall-art{right:10%;width:22%}
+ .room-sofa{left:20%;width:57%;height:27%;bottom:28%}
+ .room-rug{bottom:18%;left:8%;width:84%}
+ .room-plant{right:3%;bottom:32%;width:13%}
+ .preview-room{padding:18px}
+}
+
 </style>
 </head>
 <body>
