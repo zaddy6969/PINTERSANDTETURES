@@ -1,0 +1,13 @@
+{
+  "name": "Painters & Textures",
+  "short_name": "Painters & Textures",
+  "description": "Professional painting and texture work with quality finishes and lasting impressions.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#292a24",
+  "icons": [
+    {"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
