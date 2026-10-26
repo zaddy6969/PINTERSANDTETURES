@@ -62,6 +62,43 @@
 .preview-room p{font-size:12px;margin:0;color:#ffffffdf}
 @media(max-width:760px){.room-scene{height:350px;min-height:350px}.room-sofa{left:28%;width:49%}.window-frame{left:5%;width:26%}.wall-art{right:8%;width:23%}}
 
+
+/* Premium contact section that also serves as the site footer */
+.premium-contact{display:block!important;background:#292a24;color:#f7f5ef;padding:64px 6% 25px;position:relative;overflow:hidden}
+.premium-contact:before{content:"";position:absolute;right:-120px;top:-180px;width:460px;height:460px;border:1px solid #ffffff0d;border-radius:50%;box-shadow:0 0 0 55px #ffffff05,0 0 0 110px #ffffff03;pointer-events:none}
+.contact-topline{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:20px;border-bottom:1px solid #ffffff20;position:relative}
+.contact-index{font-size:9px;letter-spacing:.17em;color:#bcbcb0}
+.premium-contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:9%;padding:48px 0 58px;position:relative}
+.premium-contact-copy h2{font:normal clamp(44px,6vw,76px)/.98 Georgia,serif;letter-spacing:-.05em;margin:0 0 20px;max-width:760px}
+.premium-contact-copy h2 em{font-weight:normal;color:#dca083}
+.premium-contact-copy>p{max-width:530px;color:#c7c7bc;font-size:13px;line-height:1.9;margin:0}
+.premium-contact-actions{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:30px}
+.premium-call{display:inline-flex;align-items:center;gap:30px;background:#dca083;color:#292a24;padding:17px 20px;font-size:10px;font-weight:bold;letter-spacing:.12em;min-width:155px;justify-content:space-between;transition:background .2s}
+.premium-call:hover{background:#edb69a}
+.premium-email{font-size:10px;letter-spacing:.1em;color:#f7f5ef;border-bottom:1px solid #aaa99f;padding:0 0 8px}
+.premium-email span{margin-left:8px;color:#dca083}
+.premium-contact-details{align-self:center;border-left:1px solid #ffffff20;padding-left:32px}
+.detail-row{padding:7px 0 23px;border-bottom:1px solid #ffffff20;margin-bottom:19px}
+.detail-label{display:block;color:#dca083;font-size:9px;font-weight:bold;letter-spacing:.16em;margin-bottom:12px}
+.detail-value{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#f7f5ef;font:normal clamp(21px,2.4vw,30px) Georgia,serif;overflow-wrap:anywhere}
+.detail-value span{font:normal 15px Arial;color:#dca083;flex:none}
+.detail-mail{font:normal clamp(14px,1.5vw,19px) Arial,sans-serif}
+.detail-hint{display:block;color:#aead9f;font-size:10px;margin-top:9px}
+.detail-note{display:flex;align-items:center;gap:10px;color:#c7c7bc;font-size:10px;letter-spacing:.06em;margin-top:8px}
+.detail-dot{width:7px;height:7px;border-radius:50%;background:#dca083;box-shadow:0 0 0 4px #dca08320}
+.premium-footer{border-top:1px solid #ffffff20;padding-top:24px;position:relative}
+.footer-brand{display:inline-flex;align-items:center;gap:12px;color:#f7f5ef}
+.footer-monogram{font:normal 24px Georgia;letter-spacing:-.1em;border:1px solid #dca083;color:#dca083;width:43px;height:43px;display:flex;align-items:center;justify-content:center}
+.footer-monogram span{font-size:13px;padding:0 2px}
+.footer-brand-name{font-size:11px;letter-spacing:.11em;display:flex;flex-direction:column;gap:4px}
+.footer-brand-name b{font-weight:normal;color:#dca083}
+.footer-brand-name small{font-size:7px;letter-spacing:.14em;color:#aaa99f;margin-top:3px}
+.footer-links{display:flex;justify-content:flex-end;gap:24px;margin-top:-30px}
+.footer-links a{font-size:9px;letter-spacing:.12em;color:#c7c7bc;transition:color .2s}
+.footer-links a:hover{color:#dca083}
+.footer-bottom{display:flex;justify-content:space-between;gap:18px;border-top:1px solid #ffffff14;margin-top:22px;padding-top:17px;color:#99998e;font-size:9px;letter-spacing:.03em}
+@media(max-width:760px){.premium-contact{padding:45px 6% 22px}.contact-topline{align-items:flex-start;flex-direction:column;gap:9px}.premium-contact-grid{grid-template-columns:1fr;gap:38px;padding:35px 0 40px}.premium-contact-details{border-left:0;border-top:1px solid #ffffff20;padding:24px 0 0}.detail-value{font-size:26px}.detail-mail{font-size:15px}.footer-links{justify-content:flex-start;flex-wrap:wrap;margin-top:24px;gap:16px}.footer-bottom{flex-direction:column;gap:8px}.premium-contact-copy h2{font-size:clamp(43px,11vw,64px)}}
+
 </style>
 </head>
 <body>
@@ -125,9 +162,28 @@
 </section>
 <section class="section" id="inspiration"><div class="head"><div><div class="eyebrow">For homes and businesses</div><h2>A finish for every space.</h2></div><p>Tell us what you have in mind, and contact us to discuss your painting or texture work.</p></div><div class="rooms"><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Living room"><span>Living room ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Bedroom"><span>Bedroom ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Dining area"><span>Dining ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Workspace"><span>Workspaces ↗</span></a></div></section>
 <section class="section" id="process"><div class="eyebrow">Our approach</div><h2>Good work starts with a conversation.</h2><div class="steps"><div class="step"><i>01</i><h3>Discuss your needs</h3><p>Tell us about your space, the surfaces and the kind of finish you have in mind.</p></div><div class="step"><i>02</i><h3>Choose your finish</h3><p>Talk through colours, painting options and texture ideas for your project.</p></div><div class="step"><i>03</i><h3>Get in touch</h3><p>Contact us directly to discuss the work and arrange the next steps for your project.</p></div></div></section>
-<section class="contact" id="contact"><div><div class="eyebrow" style="color:#e5a084">Painting &amp; texture work</div><h2>Quality Finishes.<br>Lasting Impressions.</h2><p>All types of painting work and texture work undertaken. Contact us to discuss your requirements and request a quote.</p></div><div class="contact-details"><p><strong>Call us</strong><br><a href="tel:+917026193396" style="color:#fff;font-size:22px">7026193396</a></p><p><strong>Email us</strong><br><a href="mailto:paintersandtextures@gmail.com" style="color:#fff;font-size:16px;overflow-wrap:anywhere">paintersandtextures@gmail.com</a></p><div class="actions"><a class="btn" style="background:#dca083;color:#292a24;border-color:#dca083" href="tel:+917026193396">CALL NOW ↗</a><a class="under" style="color:#fff" href="mailto:paintersandtextures@gmail.com?subject=Painting%20and%20Texture%20Work%20Enquiry">SEND AN EMAIL ↗</a></div></div></section>
+<section class="contact premium-contact" id="contact">
+  <div class="contact-topline"><span class="eyebrow" style="color:#e5a084">LET'S BRING YOUR WALLS TO LIFE</span><span class="contact-index">PAINTING · TEXTURES · FINISHES</span></div>
+  <div class="premium-contact-grid">
+    <div class="premium-contact-copy">
+      <h2>Make your space<br><em>feel like yours.</em></h2>
+      <p>From a fresh coat of paint to statement textures, let’s find the right finish for your space. Get in touch to discuss your project and request a quote.</p>
+      <div class="premium-contact-actions"><a class="premium-call" href="tel:+917026193396">CALL US <span>↗</span></a><a class="premium-email" href="mailto:paintersandtextures@gmail.com?subject=Painting%20and%20Texture%20Work%20Enquiry">START AN ENQUIRY <span>↗</span></a></div>
+    </div>
+    <div class="premium-contact-details">
+      <div class="detail-row"><span class="detail-label">SPEAK WITH US</span><a href="tel:+917026193396" class="detail-value">7026193396 <span>↗</span></a><span class="detail-hint">Tap to call us directly</span></div>
+      <div class="detail-row"><span class="detail-label">WRITE TO US</span><a href="mailto:paintersandtextures@gmail.com" class="detail-value detail-mail">paintersandtextures@gmail.com <span>↗</span></a><span class="detail-hint">Tell us about your space and ideas</span></div>
+      <div class="detail-note"><span class="detail-dot"></span>Quality finishes. Lasting impressions.</div>
+    </div>
+  </div>
+  <div class="premium-footer">
+    <a class="footer-brand" href="#"><span class="footer-monogram">P<span>&amp;</span>T</span><span class="footer-brand-name">PAINTERS <b>&amp; TEXTURES</b><small>QUALITY FINISHES. LASTING IMPRESSIONS.</small></span></a>
+    <div class="footer-links"><a href="#textures">FINISHES</a><a href="#colour-studio">COLOUR STUDIO</a><a href="#inspiration">INSPIRATION</a><a href="#faq">FAQS</a></div>
+    <div class="footer-bottom"><span>Thoughtfully finished. Made to feel like home.</span><span>© <span id="footerYear">2026</span> Painters &amp; Textures</span></div>
+  </div>
+</section>
 <section class="section" id="faq"><div class="faq"><div class="eyebrow">A few helpful answers</div><h2 style="margin-bottom:25px">Before you begin.</h2><details><summary>What is texture paint?</summary><p>Texture finishes add visible pattern, tactile detail or dimensional effects. The final appearance depends on the material, application technique, lighting and colour.</p></details><details><summary>Can textures be used in every room?</summary><p>Suitability varies by product and exposure. Confirm the correct finish with the manufacturer or a qualified applicator for each surface.</p></details><details><summary>Should I test a sample first?</summary><p>Yes. Test it on the intended wall and check it at different times of day alongside your flooring, furniture and lighting.</p></details><details><summary>What types of work do you undertake?</summary><p>We take on all types of painting work and texture work. Contact us to discuss your specific project requirements.</p></details></div></section>
-</main><footer><a class="brand" href="#">Painters <b>&amp; Textures.</b></a><span>Quality Finishes. Lasting Impressions.</span><span>7026193396 · paintersandtextures@gmail.com</span></footer>
+</main>
 <script>
 const nav=document.getElementById('nav');document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.card').forEach(c=>c.style.display=b.dataset.filter==='all'||c.dataset.kind===b.dataset.filter?'':'none')}));
@@ -146,6 +202,7 @@ function setPreviewColour(colour,name){
 document.querySelectorAll('.palette-chip').forEach(btn=>btn.addEventListener('click',()=>setPreviewColour(btn.dataset.colour,btn.dataset.name)));
 document.getElementById('customColour').addEventListener('input',event=>setPreviewColour(event.target.value,'Custom colour'));
 setPreviewColour('#E9E0D1','Warm Linen');
+document.getElementById('footerYear').textContent=new Date().getFullYear();
 
 </script>
 </body></html>
