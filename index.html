@@ -434,6 +434,47 @@ body{overflow-x:hidden}
  #colour-studio .room-scene .room-sofa{left:27%;width:57%;height:21%;bottom:8%}
  #colour-studio .room-scene .room-rug{left:18%;width:65%}
 }
+
+/* Brand palette: matched to the supplied Painters & Textures logo */
+:root{--ink:#18243b;--rust:#b99362;--olive:#b99362;--line:#d8dce3;--paper:#f7f5ef}
+.top,.btn,.filter.active,.filter:hover{background:#18243b}
+.hero h1 em,.eyebrow,.step i,nav a:hover{color:#b99362}
+.btn,.outline{border-color:#b99362}
+.premium-contact{background:#18243b}
+.premium-contact .eyebrow,.premium-contact-copy h2 em,.footer-monogram span{color:#b99362}
+.photo,.room{cursor:pointer}
+.photo img,.room img{transition:transform .45s,filter .3s}
+.photo:hover img,.room:hover img{transform:scale(1.045);filter:saturate(1.05)}
+.booking-fab{position:fixed;right:22px;bottom:22px;z-index:20;border:1px solid #d8bd94;border-radius:999px;background:#18243b;color:#fff;padding:15px 20px;box-shadow:0 12px 34px #18243b38;letter-spacing:.08em;font-size:11px;cursor:pointer}
+.booking-overlay{position:fixed;inset:0;z-index:1000;background:#101827b8;backdrop-filter:blur(9px);display:none;align-items:center;justify-content:center;padding:22px}
+.booking-overlay.open{display:flex}
+.booking-panel{width:min(980px,100%);max-height:min(90vh,850px);overflow:auto;display:grid;grid-template-columns:.85fr 1.15fr;background:#f8f6f1;color:#18243b;border:1px solid #b99362;border-radius:18px;box-shadow:0 30px 100px #05091470;position:relative}
+.booking-visual{min-height:100%;background:#e5dfd4;position:relative;overflow:hidden}
+.booking-visual img{width:100%;height:100%;min-height:570px;object-fit:cover;display:block}
+.booking-visual:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#111a2bd9)}
+.booking-visual-copy{position:absolute;z-index:1;bottom:30px;left:28px;right:24px;color:white}
+.booking-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#d9bc91}
+.booking-visual-copy h3{font:normal 35px/1.05 Georgia;margin:10px 0}
+.booking-visual-copy p{font-size:12px;line-height:1.7;color:#f1eee7}
+.booking-content{padding:34px clamp(22px,4vw,42px);position:relative}
+.booking-close{position:absolute;right:17px;top:15px;border:1px solid #d9d3c8;background:transparent;color:#18243b;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer}
+.booking-content .booking-kicker{color:#9b7745}
+.booking-content h2{font:normal clamp(30px,3.3vw,43px)/1.05 Georgia;letter-spacing:-.04em;margin:10px 45px 10px 0}
+.booking-intro{font-size:12px;line-height:1.7;color:#676b73;margin-bottom:22px}
+.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.booking-form label{display:flex;flex-direction:column;gap:7px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#555d6a}
+.booking-form .wide{grid-column:1/-1}
+.booking-form input,.booking-form select,.booking-form textarea{width:100%;border:1px solid #d5d5d1;background:#fffdf9;border-radius:7px;padding:12px;color:#18243b;font:13px Arial;outline:none}
+.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{border-color:#b99362;box-shadow:0 0 0 3px #b9936226}
+.booking-form textarea{min-height:78px;resize:vertical}
+.booking-actions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:5px}
+.booking-actions button{border:0;border-radius:7px;padding:14px 10px;font-size:10px;letter-spacing:.07em;cursor:pointer}
+.booking-whatsapp{background:#18243b;color:#fff}
+.booking-email{background:#b99362;color:#18243b}
+.booking-privacy{grid-column:1/-1;font-size:10px;color:#7b7e84;line-height:1.6}
+.image-detail{font-size:12px;color:#676b73;line-height:1.75;padding:0 0 16px;border-bottom:1px solid #e2ded5;margin-bottom:18px}
+@media(max-width:700px){.booking-overlay{padding:10px;align-items:flex-end}.booking-panel{grid-template-columns:1fr;max-height:94vh;border-radius:15px}.booking-visual{height:190px;min-height:0}.booking-visual img{height:190px;min-height:190px}.booking-visual:after{inset:20% 0 0}.booking-visual-copy{bottom:14px;left:18px}.booking-visual-copy h3{font-size:25px;margin:5px 0}.booking-visual-copy p{display:none}.booking-content{padding:25px 18px 20px}.booking-content h2{font-size:30px}.booking-form{gap:10px}.booking-form input,.booking-form select,.booking-form textarea{padding:11px}.booking-fab{right:12px;bottom:12px;padding:13px 16px}.booking-actions{grid-template-columns:1fr}.booking-privacy{font-size:9px}}
+
 </style>
 <!-- Vercel Web Analytics -->
 <script>
@@ -486,6 +527,26 @@ body{overflow-x:hidden}
   </div>
 </section>
 
+
+<div class="booking-overlay" id="bookingOverlay" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+ <div class="booking-panel">
+  <div class="booking-visual"><img id="bookingImage" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85" alt="Interior finish inspiration"><div class="booking-visual-copy"><div class="booking-kicker">PAINTERS &amp; TEXTURES</div><h3 id="bookingVisualTitle">Let's plan your finish.</h3><p id="bookingVisualText">Quality finishes, thoughtfully chosen for your space.</p></div></div>
+  <div class="booking-content"><button class="booking-close" type="button" id="bookingClose" aria-label="Close popup">×</button><div class="booking-kicker">PERSONAL PROJECT ENQUIRY</div><h2 id="bookingTitle">Request a quotation.</h2><p class="booking-intro">Share a few details and choose WhatsApp or email. Your selected service or image is added automatically — review everything before sending.</p><div class="image-detail" id="bookingDetail">Tell us what you are planning and we’ll help you explore the next step.</div>
+   <form class="booking-form" id="bookingForm">
+    <label>Your name<input name="name" autocomplete="name" placeholder="Full name" required></label>
+    <label>Phone / WhatsApp<input name="phone" type="tel" autocomplete="tel" placeholder="Your contact number" required></label>
+    <label>Email (optional)<input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+    <label>Enquiry type<select name="requestType"><option>Request a quotation</option><option>Book a consultation</option><option>Ask about this finish</option></select></label>
+    <label class="wide">Service<select name="service" id="bookingService"><option>Interior</option><option>Exterior Painting</option><option>Wood solution</option><option>Textuer</option><option>Wall Papper</option><option>Painting &amp; texture work</option><option>Other / not sure yet</option></select></label>
+    <label class="wide">Project details<textarea name="details" id="bookingDetails" placeholder="Room or property type, approximate area, location, preferred finish, or timing…"></textarea></label>
+    <div class="booking-actions"><button class="booking-whatsapp" type="button" id="sendWhatsApp">CONTINUE ON WHATSAPP ↗</button><button class="booking-email" type="button" id="sendEmail">SEND BY EMAIL ↗</button></div>
+    <div class="booking-privacy">Nothing is sent automatically. Your chosen app opens with the details filled in so you can review and send the message yourself.</div>
+   </form>
+  </div>
+ </div>
+</div>
+<button class="booking-fab" type="button" id="openBooking">BOOK / GET A QUOTE ↗</button>
+
 </main>
 <script>
 const nav=document.getElementById('nav');document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
@@ -507,6 +568,59 @@ if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-moti
   revealTargets.forEach(el=>revealObserver.observe(el));
 }
 
+
+const bookingOverlay=document.getElementById('bookingOverlay');
+const bookingForm=document.getElementById('bookingForm');
+const bookingService=document.getElementById('bookingService');
+const bookingDetails=document.getElementById('bookingDetails');
+const bookingImage=document.getElementById('bookingImage');
+const bookingVisualTitle=document.getElementById('bookingVisualTitle');
+const bookingVisualText=document.getElementById('bookingVisualText');
+const bookingDetail=document.getElementById('bookingDetail');
+const defaultBookingImage='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85';
+function openBooking({title='Painting & texture work',description='Tell us what you have in mind and we can discuss the right finish for your space.',image=defaultBookingImage,service='Painting & texture work',kind='quote'}={}){
+ bookingOverlay.classList.add('open');document.body.style.overflow='hidden';
+ bookingVisualTitle.textContent=title;bookingVisualText.textContent=description;bookingDetail.textContent=description;
+ bookingImage.src=image;bookingImage.alt=title+' inspiration';
+ bookingService.value=[...bookingService.options].some(o=>o.value===service||o.text===service)?service:'Painting & texture work';
+ if(kind==='image') bookingDetails.value='I am interested in this look: '+title+'. Please share options and a quotation.';
+ else if(kind==='service') bookingDetails.value='I would like to enquire about '+title+'. Please help me with a quotation.';
+ document.getElementById('bookingTitle').textContent=kind==='image'?'Ask about this look.':'Request a quotation.';
+ setTimeout(()=>bookingForm.elements.name.focus({preventScroll:true}),100);
+}
+function closeBooking(){bookingOverlay.classList.remove('open');document.body.style.overflow='';}
+document.getElementById('openBooking').addEventListener('click',()=>openBooking());
+document.getElementById('bookingClose').addEventListener('click',closeBooking);
+bookingOverlay.addEventListener('click',e=>{if(e.target===bookingOverlay)closeBooking();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&bookingOverlay.classList.contains('open'))closeBooking();});
+document.querySelectorAll('.card').forEach(card=>{
+ const img=card.querySelector('img'),title=card.querySelector('h3'),desc=card.querySelector('p');
+ const launch=()=>openBooking({title:title?.textContent.trim()||'Finish inspiration',description:desc?.textContent.trim()||'Ask us about this finish and request a quotation.',image:img?.src||defaultBookingImage,service:'Textuer',kind:'image'});
+ card.style.cursor='pointer';card.setAttribute('tabindex','0');card.setAttribute('role','button');card.setAttribute('aria-label','Ask about '+(title?.textContent.trim()||'this finish'));
+ card.addEventListener('click',e=>{if(e.target.closest('button,a'))return;launch();});
+ card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();launch();}});
+});
+document.querySelectorAll('.room').forEach(room=>{
+ const img=room.querySelector('img'),title=room.querySelector('span'),label=title?.textContent.replace('↗','').trim()||'Room inspiration';
+ room.addEventListener('click',e=>{e.preventDefault();openBooking({title:label,description:'Tell us about your '+label.toLowerCase()+' and ask about painting, textures or a tailored quotation.',image:img?.src||defaultBookingImage,service:'Interior',kind:'image'});});
+});
+document.querySelectorAll('.feature img,.hero-img img').forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>openBooking({title:img.alt||'Finish inspiration',description:'Like this look? Tell us about your space and ask about a similar finish.',image:img.src,service:'Interior',kind:'image'}));});
+document.querySelectorAll('a[href="#contact"],a[href="#textures"]').forEach(a=>{if(/quote|palette|contact us|explore our work/i.test(a.textContent)){a.addEventListener('click',e=>{e.preventDefault();openBooking({title:'Let’s discuss your project',service:'Painting & texture work'});});}});
+function bookingMessage(){
+ const d=new FormData(bookingForm);
+ const fields=[['Name',d.get('name')],['Phone / WhatsApp',d.get('phone')],['Email',d.get('email')],['Enquiry',d.get('requestType')],['Service',d.get('service')],['Project details',d.get('details')]].filter(([k,v])=>String(v||'').trim());
+ return 'PAINTERS & TEXTURES — '+d.get('requestType')+'\n\n'+fields.map(([k,v])=>k+': '+String(v).trim()).join('\n')+'\n\nQuality Finishes. Lasting Impressions.';
+}
+document.getElementById('sendWhatsApp').addEventListener('click',()=>{
+ if(!bookingForm.reportValidity())return;
+ window.open('https://wa.me/917026193396?text='+encodeURIComponent(bookingMessage()),'_blank','noopener,noreferrer');
+});
+document.getElementById('sendEmail').addEventListener('click',()=>{
+ if(!bookingForm.reportValidity())return;
+ const d=new FormData(bookingForm);
+ const subject=encodeURIComponent('Painting & Textures — '+d.get('requestType'));
+ window.location.href='mailto:paintersandtextures@gmail.com?subject='+subject+'&body='+encodeURIComponent(bookingMessage());
+});
 
 </script>
 </body></html>
