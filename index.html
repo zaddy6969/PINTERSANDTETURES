@@ -604,7 +604,7 @@ document.querySelectorAll('.room').forEach(room=>{
  const img=room.querySelector('img'),title=room.querySelector('span'),label=title?.textContent.replace('↗','').trim()||'Room inspiration';
  room.addEventListener('click',e=>{e.preventDefault();openBooking({title:label,description:'Tell us about your '+label.toLowerCase()+' and ask about painting, textures or a tailored quotation.',image:img?.src||defaultBookingImage,service:label,kind:'image'});});
 });
-document.querySelectorAll('.feature img,.hero-img img').forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>openBooking({title:img.alt||'Finish inspiration',description:'Like this look? Tell us about your space and ask about a similar finish.',image:img.src,service:label,kind:'image'}));});
+document.querySelectorAll('.feature img,.hero-img img').forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>openBooking({title:img.alt||'Finish inspiration',description:'Like this look? Tell us about your space and ask about a similar finish.',image:img.src,service:'Other / not sure yet',kind:'image'}));});
 document.querySelectorAll('a[href="#contact"],a[href="#textures"]').forEach(a=>{if(/quote|palette|contact us|explore our work/i.test(a.textContent)){a.addEventListener('click',e=>{e.preventDefault();openBooking({title:'Let’s discuss your project',service:'Painting & texture work'});});}});
 function bookingMessage(){
  const d=new FormData(bookingForm);
