@@ -503,6 +503,27 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 .footer-bottom{border-top:1px solid #34415a;margin-top:25px;padding-top:15px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#c6c9d1;font-size:9px;letter-spacing:.1em}
 @media(max-width:760px){.nav{height:auto;min-height:72px;padding:8px 5%;gap:10px}.brand-logo{width:37px;height:48px}.brand-name{font-size:19px}.nav>.outline{display:none}.footer-brand img{width:62px;height:78px}.footer-brand strong{font-size:22px}.footer-bottom{line-height:1.7}}
 @media(max-width:420px){.brand{gap:8px}.brand-name{font-size:17px}.brand-logo{width:31px;height:42px}.footer-links{gap:14px}}
+
+/* Full-screen split-screen painting and texture homepage */
+.split-hero{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;height:calc(100svh - 86px);min-height:560px;max-height:none;overflow:hidden;background:#17294a}
+.split-panel{position:relative;display:block;min-width:0;height:100%;overflow:hidden;color:#fff}
+.split-panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(.88)}
+.split-panel:hover img{transform:scale(1.045)}
+.split-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,20,36,.78) 0%,rgba(10,20,36,.2) 55%,rgba(10,20,36,.12) 100%)}
+.split-painting:after{content:"";position:absolute;right:0;top:0;bottom:0;width:1px;background:rgba(255,255,255,.8);z-index:2}
+.split-label{position:absolute;left:clamp(24px,5vw,76px);bottom:clamp(70px,12vh,135px);display:flex;flex-direction:column;align-items:flex-start;gap:16px;z-index:2}
+.split-label small{font-size:10px;letter-spacing:.2em;color:#e0c08a;font-weight:700}
+.split-label strong{font:normal clamp(36px,5.2vw,76px)/.98 Georgia,serif;letter-spacing:-.045em;color:#fff}
+.split-label em{font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #c7a06b;padding-bottom:9px;color:#fff}
+.split-center{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;width:max-content;max-width:90%;padding:18px 25px;background:#17294a;box-shadow:0 12px 40px rgba(0,0,0,.22);text-align:center;border:1px solid rgba(199,160,107,.8)}
+.split-center span{font: bold clamp(13px,1.6vw,20px) Georgia,serif;letter-spacing:.04em;color:#fff;white-space:nowrap}
+.split-center b{color:#c7a06b}
+.split-center i{font:normal 9px Arial,sans-serif;letter-spacing:.13em;color:#f1dfc3}
+.split-bottom-note{position:absolute;z-index:4;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:18px;align-items:center;white-space:nowrap;color:#fff;font-size:9px;letter-spacing:.2em;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.split-bottom-note span{font-size:17px;color:#e0c08a}
+@media(max-width:760px){.split-hero{height:calc(100svh - 72px);min-height:540px}.split-label{left:18px;bottom:80px;gap:12px}.split-label strong{font-size:clamp(28px,6.5vw,48px)}.split-label small{font-size:8px;letter-spacing:.12em}.split-label em{font-size:9px}.split-center{padding:14px 13px}.split-center span{font-size:13px}.split-center i{font-size:8px;letter-spacing:.04em}.split-bottom-note{font-size:7px;letter-spacing:.12em;bottom:16px}}
+@media(max-width:400px){.split-label{left:12px;bottom:76px}.split-label strong{font-size:27px}.split-label em{font-size:8px}.split-center{padding:12px 9px}.split-center span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.split-panel img{transition:none}}
 </style>
 <!-- Vercel Web Analytics -->
 <script>
@@ -514,7 +535,23 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 <div class="top">QUALITY FINISHES · LASTING IMPRESSIONS</div>
 <header class="nav"><a class="brand" href="#" aria-label="Painters and Textures home"><img class="brand-logo" src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/pt-logo.jpg" alt="Painters &amp; Textures logo"><span class="brand-name">Painters <b>&amp; Textures.</b></span></a><nav id="nav"><a href="#textures">Textures</a><a href="#inspiration">Inspiration</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">BOOK A CONSULTATION ↗</a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
 <main>
-<section class="hero"><div><div class="eyebrow">The art of the wall · New collection</div><h1>Quality Finishes.<br><em>Lasting Impressions.</em></h1><p>All types of painting work and texture work undertaken. We help bring your spaces to life with careful workmanship, beautiful finishes and attention to detail.</p><div class="actions"><a class="btn" href="#textures">EXPLORE OUR WORK ↗</a><a class="under" href="#contact">Contact us for a quote</a></div></div><div class="hero-img"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Warm contemporary living room"><span class="stamp">PAINTING &amp; TEXTURE WORK</span></div></section>
+<section class="hero split-hero" aria-label="Painting and texture finishes">
+  <a class="split-panel split-painting" href="#contact" aria-label="Enquire about painting">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=90" alt="Beautifully painted interior wall" fetchpriority="high">
+    <span class="split-shade"></span>
+    <span class="split-label"><small>01 / PAINTING</small><strong>Painted to<br>perfection.</strong><em>Explore painting ↗</em></span>
+  </a>
+  <a class="split-panel split-texture" href="#inspiration" aria-label="Explore wall textures">
+    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=90" alt="Textured finishes in a refined interior" fetchpriority="high">
+    <span class="split-shade"></span>
+    <span class="split-label"><small>02 / TEXTURES</small><strong>Walls with<br>character.</strong><em>Explore textures ↗</em></span>
+  </a>
+  <div class="split-center" aria-label="Painters and Textures">
+    <span>PAINTERS <b>&amp; TEXTURES</b></span>
+    <i>Quality Finishes. Lasting Impressions.</i>
+  </div>
+  <div class="split-bottom-note">CRAFTED FINISHES FOR EVERY SPACE <span>↓</span></div>
+</section>
 <div class="strip"><strong>Painting &amp; textures, done with care.</strong><p>From refreshing your walls to adding decorative texture, get in touch to discuss your painting project.</p></div>
 <section class="section" id="textures"><div class="head"><div><div class="eyebrow">Our services</div></div><p>Explore finish ideas for your home or business. Contact us to discuss the work you need.</p></div><div class="filters"><button class="filter active" data-filter="all">All finishes</button><button class="filter" data-filter="earth">Earth & stone</button><button class="filter" data-filter="soft">Soft & subtle</button><button class="filter" data-filter="bold">Statement</button></div>
 <div class="cards">
