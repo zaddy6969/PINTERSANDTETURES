@@ -479,6 +479,30 @@ body{overflow-x:hidden}
 /* Keep all five service cards on one line. Narrow screens can scroll horizontally. */
 #inspiration .rooms{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 @media(max-width:700px){#inspiration .rooms{grid-template-columns:repeat(5,minmax(150px,1fr));overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}#inspiration .rooms .room{scroll-snap-align:start}}
+
+/* Painters & Textures navy-and-gold identity */
+:root{--paper:#f7f5ef;--ink:#17294a;--muted:#6e7180;--rust:#c7a06b;--line:#ded8cc;--olive:#c7a06b}
+.top{background:#17294a;color:#f4dfbd}
+.brand{display:flex;align-items:center;gap:12px;min-width:0;letter-spacing:0}
+.brand-logo{width:48px;height:58px;object-fit:contain;display:block;flex-shrink:0}
+.brand-name{font:bold 23px Georgia;letter-spacing:-.7px;white-space:nowrap}
+.brand-name b{color:#c7a06b}
+h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
+.eyebrow,.hero h1 em,.head h2 em,.step i,nav a:hover{color:#b99362}
+.btn,.filter.active,.filter:hover{background:#17294a;color:#fff;border-color:#17294a}
+.outline{border-color:#b99362;color:#17294a}
+.site-footer{background:#111d33;color:#f8f4eb;padding:38px 6% 18px;margin-top:0}
+.footer-brand{display:flex;align-items:center;gap:18px}
+.footer-brand img{width:74px;height:92px;object-fit:contain;display:block}
+.footer-brand strong{font: bold 25px Georgia;letter-spacing:-.5px}
+.footer-brand strong span{color:#c7a06b}
+.footer-brand p{font-size:11px;letter-spacing:.13em;color:#e0c59a;margin:8px 0 0;text-transform:uppercase}
+.footer-links{display:flex;flex-wrap:wrap;gap:22px;margin:28px 0 20px;font-size:12px}
+.footer-links a:hover,.footer-contact a:hover{color:#d6b27d}
+.footer-contact{display:flex;flex-wrap:wrap;gap:18px;font-size:12px;color:#e0c59a}
+.footer-bottom{border-top:1px solid #34415a;margin-top:25px;padding-top:15px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#c6c9d1;font-size:9px;letter-spacing:.1em}
+@media(max-width:760px){.nav{height:auto;min-height:72px;padding:8px 5%;gap:10px}.brand-logo{width:37px;height:48px}.brand-name{font-size:19px}.nav>.outline{display:none}.footer-brand img{width:62px;height:78px}.footer-brand strong{font-size:22px}.footer-bottom{line-height:1.7}}
+@media(max-width:420px){.brand{gap:8px}.brand-name{font-size:17px}.brand-logo{width:31px;height:42px}.footer-links{gap:14px}}
 </style>
 <!-- Vercel Web Analytics -->
 <script>
@@ -488,7 +512,7 @@ body{overflow-x:hidden}
 </head>
 <body>
 <div class="top">QUALITY FINISHES · LASTING IMPRESSIONS</div>
-<header class="nav"><a class="brand" href="#">Painters <b>&amp; Textures.</b></a><nav id="nav"><a href="#textures">Textures</a><a href="#inspiration">Inspiration</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">BOOK A CONSULTATION ↗</a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
+<header class="nav"><a class="brand" href="#" aria-label="Painters and Textures home"><img class="brand-logo" src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/pt-logo.jpg" alt="Painters &amp; Textures logo"><span class="brand-name">Painters <b>&amp; Textures.</b></span></a><nav id="nav"><a href="#textures">Textures</a><a href="#inspiration">Inspiration</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">BOOK A CONSULTATION ↗</a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
 <main>
 <section class="hero"><div><div class="eyebrow">The art of the wall · New collection</div><h1>Quality Finishes.<br><em>Lasting Impressions.</em></h1><p>All types of painting work and texture work undertaken. We help bring your spaces to life with careful workmanship, beautiful finishes and attention to detail.</p><div class="actions"><a class="btn" href="#textures">EXPLORE OUR WORK ↗</a><a class="under" href="#contact">Contact us for a quote</a></div></div><div class="hero-img"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Warm contemporary living room"><span class="stamp">PAINTING &amp; TEXTURE WORK</span></div></section>
 <div class="strip"><strong>Painting &amp; textures, done with care.</strong><p>From refreshing your walls to adding decorative texture, get in touch to discuss your painting project.</p></div>
@@ -551,6 +575,12 @@ body{overflow-x:hidden}
 </div>
 <button class="booking-fab" type="button" id="openBooking">BOOK / GET A QUOTE ↗</button>
 
+<footer class="site-footer">
+  <div class="footer-brand"><img src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/pt-logo.jpg" alt="Painters &amp; Textures logo" loading="lazy"><div><strong>Painters <span>&amp; Textures</span></strong><p>Quality Finishes. Lasting Impressions.</p></div></div>
+  <div class="footer-links"><a href="#textures">Services</a><a href="#inspiration">Our work</a><a href="#process">Our process</a><a href="#faq">FAQs</a><a href="#contact">Get a quote ↗</a></div>
+  <div class="footer-contact"><a href="tel:+917026193396">7026193396</a><a href="mailto:paintersandtextures@gmail.com">paintersandtextures@gmail.com</a></div>
+  <div class="footer-bottom"><span>© <span id="footerYear">2026</span> Painters &amp; Textures</span><span>COLOURS THAT INSPIRE. FINISHES THAT LAST.</span></div>
+</footer>
 </main>
 <script>
 const nav=document.getElementById('nav');document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
