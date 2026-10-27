@@ -1,0 +1,35 @@
+name: One-time booking script fix
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix non-room image booking service
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old = "document.querySelectorAll('.feature img,.hero-img img').forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>openBooking({title:img.alt||'Finish inspiration',description:'Like this look? Tell us about your space and ask about a similar finish.',image:img.src,service:label,kind:'image'}));});"
+          new = "document.querySelectorAll('.feature img,.hero-img img').forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>openBooking({title:img.alt||'Finish inspiration',description:'Like this look? Tell us about your space and ask about a similar finish.',image:img.src,service:'Other / not sure yet',kind:'image'}));});"
+          if old not in s:
+              raise SystemExit('Expected booking handler was not found')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+      - name: Commit fix and remove one-time workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git rm .github/workflows/fix-booking-room-script.yml
+          git commit -m "Fix booking popup image service fallback"
+          git push
