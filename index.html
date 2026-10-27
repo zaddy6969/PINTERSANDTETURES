@@ -537,7 +537,7 @@ body{overflow-x:hidden}
     <label>Phone / WhatsApp<input name="phone" type="tel" autocomplete="tel" placeholder="Your contact number" required></label>
     <label>Email (optional)<input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
     <label>Enquiry type<select name="requestType"><option>Request a quotation</option><option>Book a consultation</option><option>Ask about this finish</option></select></label>
-    <label class="wide">Service<select name="service" id="bookingService"><option>Interior</option><option>Exterior Painting</option><option>Wood solution</option><option>Textuer</option><option>Wall Papper</option><option>Painting &amp; texture work</option><option>Other / not sure yet</option></select></label>
+    <label class="wide">Service<select name="service" id="bookingService"><option>Living room</option><option>Bedroom</option><option>Dining</option><option>Workspaces</option><option>Other / not sure yet</option></select></label>
     <label class="wide">Project details<textarea name="details" id="bookingDetails" placeholder="Room or property type, approximate area, location, preferred finish, or timing…"></textarea></label>
     <div class="booking-actions"><button class="booking-whatsapp" type="button" id="sendWhatsApp">CONTINUE ON WHATSAPP ↗</button><button class="booking-email" type="button" id="sendEmail">SEND BY EMAIL ↗</button></div>
     <div class="booking-privacy">Nothing is sent automatically. Your chosen app opens with the details filled in so you can review and send the message yourself.</div>
@@ -602,9 +602,9 @@ document.querySelectorAll('.card').forEach(card=>{
 });
 document.querySelectorAll('.room').forEach(room=>{
  const img=room.querySelector('img'),title=room.querySelector('span'),label=title?.textContent.replace('↗','').trim()||'Room inspiration';
- room.addEventListener('click',e=>{e.preventDefault();openBooking({title:label,description:'Tell us about your '+label.toLowerCase()+' and ask about painting, textures or a tailored quotation.',image:img?.src||defaultBookingImage,service:'Interior',kind:'image'});});
+ room.addEventListener('click',e=>{e.preventDefault();openBooking({title:label,description:'Tell us about your '+label.toLowerCase()+' and ask about painting, textures or a tailored quotation.',image:img?.src||defaultBookingImage,service:label,kind:'image'});});
 });
-document.querySelectorAll('.feature img,.hero-img img').forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>openBooking({title:img.alt||'Finish inspiration',description:'Like this look? Tell us about your space and ask about a similar finish.',image:img.src,service:'Interior',kind:'image'}));});
+document.querySelectorAll('.feature img,.hero-img img').forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>openBooking({title:img.alt||'Finish inspiration',description:'Like this look? Tell us about your space and ask about a similar finish.',image:img.src,service:label,kind:'image'}));});
 document.querySelectorAll('a[href="#contact"],a[href="#textures"]').forEach(a=>{if(/quote|palette|contact us|explore our work/i.test(a.textContent)){a.addEventListener('click',e=>{e.preventDefault();openBooking({title:'Let’s discuss your project',service:'Painting & texture work'});});}});
 function bookingMessage(){
  const d=new FormData(bookingForm);
