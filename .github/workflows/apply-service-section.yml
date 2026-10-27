@@ -1,0 +1,45 @@
+name: Apply requested service section
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  update-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Replace room cards with services
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          start = s.index('<section class="section" id="inspiration">')
+          end = s.index('</section>', start) + len('</section>')
+          section = '''<section class="section" id="inspiration"><div class="head"><div><div class="eyebrow">For homes and businesses</div><h2>A finish for every space.</h2></div><p>Explore our painting and finishing services, and contact us to discuss the right finish for your space.</p></div><div class="rooms"><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Interior painting"><span>Interior ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Exterior painting"><span>Exterior Painting ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80" alt="Wood solution"><span>Wood solution ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Wall texture work"><span>Textuer ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Wall paper installation"><span>Wall Papper ↗</span></a></div></section>'''
+          s = s[:start] + section + s[end:]
+          old = '''<option>Living room</option><option>Bedroom</option><option>Dining</option><option>Workspaces</option><option>Other / not sure yet</option>'''
+          new = '''<option>Interior</option><option>Exterior Painting</option><option>Wood solution</option><option>Textuer</option><option>Wall Papper</option><option>Painting &amp; texture work</option><option>Other / not sure yet</option>'''
+          s = s.replace(old, new)
+          p.write_text(s, encoding='utf-8')
+      - name: Validate and commit
+        shell: bash
+        run: |
+          grep -q 'Interior ↗' index.html
+          grep -q 'Exterior Painting ↗' index.html
+          grep -q 'Wood solution ↗' index.html
+          grep -q 'Textuer ↗' index.html
+          grep -q 'Wall Papper ↗' index.html
+          ! grep -q 'Living room ↗' index.html
+          ! grep -q 'Bedroom ↗' index.html
+          ! grep -q 'Dining ↗' index.html
+          ! grep -q 'Workspaces ↗' index.html
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git rm .github/workflows/apply-service-section.yml
+          git commit -m 'Replace room categories with painting services' || exit 0
+          git push
