@@ -1,0 +1,31 @@
+name: Header size and translucency
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/header-size-translucent.yml'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update header styling
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          css = '''\n/* Compact translucent sticky header */\n.premium-nav{height:64px!important;padding:0 5%!important;position:sticky!important;top:0!important;z-index:1000!important;background:rgba(247,245,239,.82)!important;backdrop-filter:blur(14px)!important;-webkit-backdrop-filter:blur(14px)!important;border-bottom:1px solid rgba(222,219,209,.72)!important;box-shadow:0 4px 18px rgba(41,42,36,.06)!important}\n.premium-nav .brand-logo{width:42px!important;height:42px!important}\n.premium-nav .brand-name{font-size:16px!important;line-height:1.05!important}\n.premium-nav .brand-name small{font-size:7px!important;letter-spacing:.13em!important}\n.premium-nav nav{gap:20px!important;font-size:11px!important}\n.premium-nav .outline,.premium-nav .btn{padding:10px 14px!important;font-size:10px!important}\n@media(max-width:760px){.premium-nav{height:60px!important;padding:0 5%!important}.premium-nav .brand-logo{width:36px!important;height:36px!important}.premium-nav .brand-name{font-size:14px!important}.premium-nav nav{top:60px!important}}\n'''
+          if '/* Compact translucent sticky header */' not in s:
+              s = s.replace('</style>', css + '</style>', 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Make header smaller and translucent'
+          git push
