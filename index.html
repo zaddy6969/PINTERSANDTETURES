@@ -554,9 +554,34 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 @media(max-width:900px){.premium-nav{gap:14px;padding-inline:4%}.premium-nav .brand-logo{width:46px;height:52px}.premium-nav .brand-name{font-size:10px}.premium-nav nav{gap:14px}.premium-nav nav a{font-size:9px}.premium-nav>.outline{padding:12px;font-size:8px}}
 @media(max-width:760px){.premium-nav{height:74px;min-height:74px;padding:7px 5%;gap:10px}.premium-nav .brand{gap:9px}.premium-nav .brand-logo{width:39px;height:48px}.premium-nav .brand-name{font-size:9px;letter-spacing:.12em}.premium-nav .brand-name small{font-size:6px}.premium-nav nav{top:74px;left:0;right:0;padding:22px 6%;gap:18px;background:#fbf9f4;box-shadow:0 12px 20px #17294a12}.premium-nav nav a{font-size:11px}.premium-nav>.outline{display:none}.premium-nav .menu{display:block;font-size:22px}.premium-contact .footer-links{margin-top:20px;justify-content:flex-start}.premium-contact .footer-brand img{width:46px;height:46px}}
 </style>
+<style>
+/* Refined white header with a clean, transparent PT monogram */
+.premium-nav{background:#fff!important;border-bottom:1px solid #e8e6e0;position:relative;z-index:10}
+.pt-brand{display:flex;align-items:center;justify-content:flex-start;min-width:66px}
+.pt-mark{display:inline-flex;align-items:baseline;font:normal 38px/.9 Georgia,'Times New Roman',serif;letter-spacing:-.12em;color:#17294a;background:transparent;border:0;padding:0}
+.pt-mark span{color:#c7a06b;font-size:.78em;margin-left:1px}
+.premium-nav nav{margin-left:auto;margin-right:34px}
+.premium-nav .outline{border-color:#17294a;color:#17294a;background:#fff;transition:all .2s}
+.premium-nav .outline:hover{background:#17294a;color:#fff}
+.service-rooms{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.service-rooms .room{height:340px}
+.service-rooms .room span{font-size:clamp(17px,1.55vw,24px);line-height:1.1;right:12px;left:14px}
+.works-section{background:#fff}
+.works-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:16px}
+.work-tile{height:350px;position:relative;overflow:hidden;display:block;background:#d9d4ca}
+.work-tile img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.work-tile:hover img{transform:scale(1.045)}
+.work-tile:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(15,26,43,.78))}
+.work-tile>span{position:absolute;z-index:1;left:22px;right:18px;bottom:23px;color:white;display:flex;flex-direction:column;gap:9px}
+.work-tile small{font:700 9px Arial,sans-serif;letter-spacing:.16em;color:#e1b77f}
+.work-tile strong{font:normal clamp(22px,2.3vw,32px)/1.08 Georgia,serif}
+.works-note{font-size:10px;line-height:1.7;color:var(--muted);margin:16px 0 0}
+@media(max-width:900px){.service-rooms{grid-template-columns:repeat(3,minmax(0,1fr))}.service-rooms .room{height:260px}.works-grid{grid-template-columns:1fr 1fr}.work-tile:first-child{grid-column:1/-1;height:300px}}
+@media(max-width:600px){.premium-nav{height:70px}.pt-mark{font-size:34px}.premium-nav nav{margin:0}.service-rooms{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service-rooms .room{height:220px}.service-rooms .room span{font-size:19px;left:11px;bottom:13px}.works-grid{grid-template-columns:1fr}.work-tile,.work-tile:first-child{grid-column:auto;height:270px}}
+</style>
 </head>
 <body>
-<header class="nav premium-nav"><a class="brand" href="#" aria-label="Painters and Textures home"><img class="brand-logo" src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures monogram logo"><span class="brand-name">PAINTERS <b>&amp; TEXTURES</b><small>CRAFTED WALL FINISHES</small></span></a><nav id="nav"><a href="#textures">Services</a><a href="#inspiration">Inspiration</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">GET A QUOTE <span>↗</span></a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
+<header class="nav premium-nav"><a class="brand pt-brand" href="#" aria-label="Painters and Textures home"><span class="pt-mark" aria-hidden="true">P<span>T</span></span></a><nav id="nav"><a href="#services">Services</a><a href="#works">Our works</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">GET A QUOTE <span>↗</span></a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
 <main>
 <section class="hero split-hero single-image-hero" aria-label="Painting and texture finishes">
   <img class="single-hero-image" src="/assets/images/pt-homepage-hero-4k.png" alt="Blue painted wall beside a warm golden textured wall in a refined living room" fetchpriority="high">
@@ -574,6 +599,8 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
   </div>
 </section>
 <div class="strip"><strong>Painting &amp; textures, done with care.</strong><p>From refreshing your walls to adding decorative texture, get in touch to discuss your painting project.</p></div>
+<section class="section" id="services"><div class="head"><div><div class="eyebrow">Our services</div><h2>A finish for every space.</h2></div><p>Thoughtful painting and finishing for homes and businesses. Choose a service to start a conversation about your project.</p></div><div class="rooms service-rooms"><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Interior painting"><span>Interior Painting ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Exterior painting"><span>Exterior Painting ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80" alt="Wood solution"><span>Wood solution ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Wall texture work"><span>Textuer ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Wall paper installation"><span>Wall Papper ↗</span></a></div></section>
+<section class="section works-section" id="works"><div class="head"><div><div class="eyebrow">Selected inspiration</div><h2>Our works, your next idea.</h2></div><p>A closer look at the spaces, materials and details that can shape a beautiful finish. Ask us about a look you love.</p></div><div class="works-grid"><a class="work-tile" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Warm refined living room with layered materials"><span><small>01 / INTERIORS</small><strong>Calm, considered spaces</strong></span></a><a class="work-tile" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Contemporary home exterior and architectural finish"><span><small>02 / EXTERIORS</small><strong>Beautiful from the outside</strong></span></a><a class="work-tile" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Modern interior featuring warm wood finishes"><span><small>03 / MATERIALS</small><strong>Texture with character</strong></span></a></div><p class="works-note">Images are for finish inspiration. Contact us to discuss project examples and suitable options for your space.</p></section>
 <section class="section" id="textures"><div class="head"><div><div class="eyebrow">Our services</div></div><p>Explore finish ideas for your home or business. Contact us to discuss the work you need.</p></div><div class="filters"><button class="filter active" data-filter="all">All finishes</button><button class="filter" data-filter="earth">Earth & stone</button><button class="filter" data-filter="soft">Soft & subtle</button><button class="filter" data-filter="bold">Statement</button></div>
 <div class="cards">
 <article class="card" data-kind="earth"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Warm earthy interior materials"><span class="tag">Earth inspired</span></div><h3>Raw Stone</h3><p>Grounded · Organic · Timeless</p></article>
@@ -589,7 +616,7 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 </div></section>
 <section class="feature"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Natural palette in a warm modern home"><div class="feature-copy"><div class="eyebrow">Thoughtful workmanship</div><h2>Fresh colour.<br>Beautiful texture.</h2><p>Choose colours and finishes that suit your space. We take on painting and texture work for projects that deserve a clean, considered finish.</p><div class="swatches"><span style="background:#e9e0d1" title="Linen"></span><span style="background:#b87b60" title="Terracotta"></span><span style="background:#898875" title="Sage"></span><span style="background:#71675b" title="Taupe"></span><span style="background:#383a34" title="Charcoal"></span></div><a class="btn" href="#contact">BUILD YOUR PALETTE ↗</a></div></section>
 
-<section class="section" id="inspiration"><div class="head"><div><div class="eyebrow">For homes and businesses</div><h2>A finish for every space.</h2></div><p>Explore our painting and finishing services, and contact us to discuss the right finish for your space.</p></div><div class="rooms"><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Interior painting"><span>Interior Painting ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Exterior painting"><span>Exterior Painting ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80" alt="Wood solution"><span>Wood solution ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Wall texture work"><span>Textuer ↗</span></a><a class="room" href="#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Wall paper installation"><span>Wall Papper ↗</span></a></div></section>
+
 <section class="section" id="process"><div class="eyebrow">Our approach</div><h2>Good work starts with a conversation.</h2><div class="steps"><div class="step"><i>01</i><h3>Discuss your needs</h3><p>Tell us about your space, the surfaces and the kind of finish you have in mind.</p></div><div class="step"><i>02</i><h3>Choose your finish</h3><p>Talk through colours, painting options and texture ideas for your project.</p></div><div class="step"><i>03</i><h3>Get in touch</h3><p>Contact us directly to discuss the work and arrange the next steps for your project.</p></div></div></section>
 <section class="contact premium-contact" id="contact">
   <div class="contact-topline"><span class="eyebrow" style="color:#e5a084">LET'S BRING YOUR WALLS TO LIFE</span><span class="contact-index">PAINTING · TEXTURES · FINISHES</span></div>
@@ -608,7 +635,7 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
   <div class="footer-faq" id="faq"><div class="footer-faq-title"><span>QUICK ANSWERS</span><strong>FAQs</strong></div><div class="footer-faq-items"><details><summary>What is texture paint?</summary><p>Texture finishes add pattern, tactile detail or dimension. The result depends on the material, technique, lighting and colour.</p></details><details><summary>Can textures be used in every room?</summary><p>Suitability depends on the product and room conditions. We can help discuss the right finish for your surface.</p></details><details><summary>Should I test a sample first?</summary><p>Yes. Test it on the intended wall and view it in different lighting before choosing.</p></details><details><summary>What work do you undertake?</summary><p>We undertake all types of painting and texture work. Contact us to discuss your project.</p></details></div></div>
   <div class="premium-footer">
     <a class="footer-brand" href="#" aria-label="Painters and Textures home"><img src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures monogram logo" loading="lazy"><span class="footer-brand-name">PAINTERS <b>&amp; TEXTURES</b><small>CRAFTED WALL FINISHES</small></span></a>
-    <div class="footer-links"><a href="#textures">FINISHES</a><a href="#inspiration">INSPIRATION</a><a href="#faq">FAQS</a></div>
+    <div class="footer-links"><a href="#textures">FINISHES</a><a href="#works">OUR WORKS</a><a href="#faq">FAQS</a></div>
     <div class="footer-bottom"><span>Thoughtfully finished. Made to feel like home.</span><span>© <span id="footerYear">2026</span> Painters &amp; Textures</span></div>
   </div>
 </section>
@@ -645,7 +672,7 @@ document.getElementById('footerYear').textContent=new Date().getFullYear();
 // Elegant scroll reveals; content remains visible if IntersectionObserver is unavailable.
 if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   document.body.classList.add('reveal-ready');
-  const revealTargets=document.querySelectorAll('.strip,.section .head,.cards .card,.feature,.steps .step,.rooms .room,.footer-faq');
+  const revealTargets=document.querySelectorAll('.strip,.section .head,.cards .card,.feature,.steps .step,.rooms .room,.work-tile,.footer-faq');
   revealTargets.forEach(el=>el.classList.add('reveal-item'));
   const revealObserver=new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
