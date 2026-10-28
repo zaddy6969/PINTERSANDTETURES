@@ -537,6 +537,18 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 <main>
 <section class="hero split-hero single-image-hero" aria-label="Painting and texture finishes">
   <img class="single-hero-image" src="/assets/images/pt-homepage-hero-4k.png" alt="Blue painted wall beside a warm golden textured wall in a refined living room" fetchpriority="high">
+  <div class="hero-copy hero-copy-paint">
+    <span class="hero-kicker">01 / PAINTING</span>
+    <h1>Fresh walls.<br>Flawless finish.</h1>
+    <p>Beautifully painted spaces, finished with care.</p>
+    <a href="#textures">EXPLORE PAINTING ↗</a>
+  </div>
+  <div class="hero-copy hero-copy-texture">
+    <span class="hero-kicker">02 / TEXTURES</span>
+    <h2>Texture with<br>character.</h2>
+    <p>Bring depth, warmth and personality to your walls.</p>
+    <a href="#textures">EXPLORE TEXTURES ↗</a>
+  </div>
 </section>
 <div class="strip"><strong>Painting &amp; textures, done with care.</strong><p>From refreshing your walls to adding decorative texture, get in touch to discuss your painting project.</p></div>
 <section class="section" id="textures"><div class="head"><div><div class="eyebrow">Our services</div></div><p>Explore finish ideas for your home or business. Contact us to discuss the work you need.</p></div><div class="filters"><button class="filter active" data-filter="all">All finishes</button><button class="filter" data-filter="earth">Earth & stone</button><button class="filter" data-filter="soft">Soft & subtle</button><button class="filter" data-filter="bold">Statement</button></div>
@@ -685,4 +697,18 @@ document.getElementById('sendEmail').addEventListener('click',()=>{
 .single-image-hero{height:calc(100vh - 89px);min-height:520px;padding:0!important;margin:0!important;display:block!important;position:relative;overflow:hidden;background:#14243d}
 .single-hero-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
 @media(max-width:760px){.single-image-hero{height:calc(100svh - 76px);min-height:420px}.single-hero-image{object-position:center}}
+</style>
+
+<style>
+.single-image-hero{isolation:isolate}
+.single-image-hero:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(10,25,45,.48) 0%,rgba(10,25,45,.15) 35%,rgba(10,25,45,.02) 58%,rgba(10,25,45,.14) 100%)}
+.single-image-hero .hero-copy{position:absolute;z-index:1;top:50%;transform:translateY(-42%);width:min(38%,520px);padding:clamp(18px,3vw,48px);color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.28)}
+.single-image-hero .hero-copy-paint{left:0;text-align:left}
+.single-image-hero .hero-copy-texture{right:0;text-align:right}
+.single-image-hero .hero-kicker{display:block;color:#f0c98e;font-size:11px;letter-spacing:.22em;font-weight:700;margin-bottom:22px;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.single-image-hero .hero-copy h1,.single-image-hero .hero-copy h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(38px,5.3vw,78px);line-height:.99;letter-spacing:-.045em;margin:0 0 18px}
+.single-image-hero .hero-copy p{font-size:clamp(13px,1.1vw,16px);line-height:1.6;max-width:330px;margin:0 0 22px}
+.single-image-hero .hero-copy-texture p{margin-left:auto}
+.single-image-hero .hero-copy a{display:inline-block;color:#fff;text-decoration:none;font-size:11px;letter-spacing:.1em;padding:0 0 8px;border-bottom:1px solid #d2ad78}
+@media(max-width:760px){.single-image-hero{height:calc(100svh - 120px);min-height:540px}.single-image-hero .hero-copy{width:50%;padding:12px;top:auto;bottom:8%;transform:none}.single-image-hero .hero-copy-paint{left:0}.single-image-hero .hero-copy-texture{right:0}.single-image-hero .hero-kicker{font-size:8px;letter-spacing:.1em;margin-bottom:12px}.single-image-hero .hero-copy h1,.single-image-hero .hero-copy h2{font-size:clamp(27px,7vw,42px);line-height:1.02;margin-bottom:10px}.single-image-hero .hero-copy p{font-size:11px;line-height:1.4;margin-bottom:12px}.single-image-hero .hero-copy a{font-size:8px;letter-spacing:.04em}}
 </style>
