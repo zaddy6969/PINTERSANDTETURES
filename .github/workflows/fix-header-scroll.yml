@@ -1,7 +1,9 @@
 name: Fix header scrolling
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fix-header-scroll.yml'
 
 permissions:
   contents: write
