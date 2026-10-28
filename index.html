@@ -638,6 +638,22 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 .palette-section .swatch:nth-child(4){background:#746a60}
 .palette-section .swatch:nth-child(5){background:#383b37}
 </style>
+<style>
+/* Use every tone from the reference palette and give the feature panel a purposeful finish */
+.feature.palette-section{background:#e9dfcf!important;grid-template-columns:1fr 1fr;min-height:560px}
+.feature.palette-section>img{width:100%;height:100%;min-height:560px;object-fit:cover;display:block}
+.feature.palette-section .feature-copy{background:#e9dfcf;min-height:560px;padding:clamp(38px,5vw,76px) clamp(28px,5vw,80px);display:flex;flex-direction:column;justify-content:center}
+.feature.palette-section .eyebrow{color:#b77b62}
+.feature.palette-section h2{color:#182b4d}
+.feature.palette-section p{color:#5e5d56}
+.feature.palette-section .swatches.palette-swatches{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1.2vw,17px);margin:26px 0 12px;align-items:start}
+.feature.palette-section .palette-swatches span{height:clamp(56px,6vw,82px);min-width:0;border:2px solid rgba(255,255,255,.9);border-radius:2px;box-shadow:0 2px 7px rgba(24,43,77,.09);position:relative}
+.feature.palette-section .palette-swatches span i{position:absolute;left:0;right:0;top:calc(100% + 9px);font:700 7px/1.2 Arial,sans-serif;font-style:normal;letter-spacing:.08em;text-align:center;color:#5e5d56;white-space:nowrap}
+.feature.palette-section .palette-note{display:flex;justify-content:space-between;gap:12px;border-top:1px solid rgba(24,43,77,.18);padding-top:13px;margin:26px 0 23px;color:#746a60;font:700 8px/1.4 Arial,sans-serif;letter-spacing:.15em}
+.feature.palette-section .btn{align-self:flex-start;background:#182b4d;color:#fff;border:1px solid #182b4d}
+.feature.palette-section .btn:hover{background:#b77b62;border-color:#b77b62}
+@media(max-width:760px){.feature.palette-section{grid-template-columns:1fr}.feature.palette-section>img{height:320px;min-height:320px}.feature.palette-section .feature-copy{min-height:0;padding:34px 7% 40px}.feature.palette-section .palette-swatches span{height:54px}.feature.palette-section .palette-swatches span i{font-size:6px;letter-spacing:.02em}.feature.palette-section .palette-note{margin-top:25px}}
+</style>
 </head>
 <body>
 <header class="nav premium-nav"><a class="brand pt-brand" href="#" aria-label="Painters and Textures home"><img class="header-pt-logo" src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures PT monogram"><span class="header-brand-name"><span>PAINTERS <b>&amp; TEXTURES</b></span><small>CRAFTED WALL FINISHES</small></span></a><nav id="nav"><a href="#services">Services</a><a href="#services">Our services</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">GET A QUOTE <span>↗</span></a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
@@ -673,7 +689,7 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 
 
 </div></section>
-<section class="feature palette-section"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Natural palette in a warm modern home"><div class="feature-copy"><div class="eyebrow">Thoughtful workmanship</div><h2>Fresh colour.<br>Beautiful texture.</h2><p>Choose colours and finishes that suit your space. We take on painting and texture work for projects that deserve a clean, considered finish.</p><div class="swatches"><span style="background:#e9e0d1" title="Linen"></span><span style="background:#b87b60" title="Terracotta"></span><span style="background:#898875" title="Sage"></span><span style="background:#71675b" title="Taupe"></span><span style="background:#383a34" title="Charcoal"></span></div><a class="btn" href="#contact">BUILD YOUR PALETTE ↗</a></div></section>
+<section class="feature palette-section"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Natural palette in a warm modern home"><div class="feature-copy"><div class="eyebrow">Thoughtful workmanship</div><h2>Fresh colour.<br>Beautiful texture.</h2><p>Choose colours and finishes that suit your space. We take on painting and texture work for projects that deserve a clean, considered finish.</p><div class="swatches palette-swatches"><span style="--swatch:#e9dfcf;background:#e9dfcf" title="Warm ivory"><i>WARM IVORY</i></span><span style="--swatch:#b77b62;background:#b77b62" title="Terracotta"><i>TERRACOTTA</i></span><span style="--swatch:#8b8b78;background:#8b8b78" title="Sage"><i>SAGE</i></span><span style="--swatch:#746a60;background:#746a60" title="Taupe"><i>TAUPE</i></span><span style="--swatch:#383b37;background:#383b37" title="Charcoal"><i>CHARCOAL</i></span></div><div class="palette-note"><span>THE FINISH PALETTE</span><span>01 — 05</span></div><a class="btn" href="#contact">BUILD YOUR PALETTE ↗</a></div></section>
 
 
 <section class="section" id="process"><div class="eyebrow">Our approach</div><h2>Good work starts with a conversation.</h2><div class="steps"><div class="step"><i>01</i><h3>Discuss your needs</h3><p>Tell us about your space, the surfaces and the kind of finish you have in mind.</p></div><div class="step"><i>02</i><h3>Choose your finish</h3><p>Talk through colours, painting options and texture ideas for your project.</p></div><div class="step"><i>03</i><h3>Get in touch</h3><p>Contact us directly to discuss the work and arrange the next steps for your project.</p></div></div></section>
