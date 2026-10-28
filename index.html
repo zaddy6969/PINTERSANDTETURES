@@ -579,9 +579,18 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 @media(max-width:900px){.service-rooms{grid-template-columns:repeat(3,minmax(0,1fr))}.service-rooms .room{height:260px}.works-grid{grid-template-columns:1fr 1fr}.work-tile:first-child{grid-column:1/-1;height:300px}}
 @media(max-width:600px){.premium-nav{height:70px}.pt-mark{font-size:34px}.premium-nav nav{margin:0}.service-rooms{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service-rooms .room{height:220px}.service-rooms .room span{font-size:19px;left:11px;bottom:13px}.works-grid{grid-template-columns:1fr}.work-tile,.work-tile:first-child{grid-column:auto;height:270px}}
 </style>
+<style>
+/* Logo artwork plus compact two-tone wordmark */
+.premium-nav .pt-brand{display:flex;align-items:center;justify-content:flex-start;gap:13px;min-width:250px;flex-shrink:0}
+.header-pt-logo{display:block;width:54px;height:54px;object-fit:contain;object-position:center;background:transparent;mix-blend-mode:multiply;flex:none}
+.header-brand-name{display:flex;flex-direction:column;gap:5px;white-space:nowrap;color:#17294a;font:700 13px/1.15 Arial,sans-serif;letter-spacing:.095em}
+.header-brand-name b{font-weight:700;color:#c7a06b}
+.header-brand-name small{font:700 7px/1.2 Arial,sans-serif;letter-spacing:.19em;color:#777b85}
+@media(max-width:760px){.premium-nav .pt-brand{min-width:0;gap:9px}.header-pt-logo{width:45px;height:45px}.header-brand-name{font-size:11px;letter-spacing:.06em}.header-brand-name small{font-size:6px;letter-spacing:.13em}}
+</style>
 </head>
 <body>
-<header class="nav premium-nav"><a class="brand pt-brand" href="#" aria-label="Painters and Textures home"><span class="pt-mark" aria-hidden="true">P<span>T</span></span></a><nav id="nav"><a href="#services">Services</a><a href="#works">Our works</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">GET A QUOTE <span>↗</span></a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
+<header class="nav premium-nav"><a class="brand pt-brand" href="#" aria-label="Painters and Textures home"><img class="header-pt-logo" src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures PT monogram"><span class="header-brand-name"><span>PAINTERS <b>&amp; TEXTURES</b></span><small>CRAFTED WALL FINISHES</small></span></a><nav id="nav"><a href="#services">Services</a><a href="#works">Our works</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">GET A QUOTE <span>↗</span></a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
 <main>
 <section class="hero split-hero single-image-hero" aria-label="Painting and texture finishes">
   <img class="single-hero-image" src="/assets/images/pt-homepage-hero-4k.png" alt="Blue painted wall beside a warm golden textured wall in a refined living room" fetchpriority="high">
