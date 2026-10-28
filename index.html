@@ -607,6 +607,21 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 @media(max-width:900px){.services-feature-grid{gap:12px}.service-feature{min-height:290px;height:34vw}.service-feature:nth-child(4){grid-column:1/span 3}.service-feature:nth-child(5){grid-column:4/span 3}.service-overlay{left:18px;bottom:20px}.service-overlay strong{font-size:clamp(23px,3vw,32px)}}
 @media(max-width:600px){.services-feature-grid{grid-template-columns:1fr 1fr;gap:10px}.service-feature,.service-feature:nth-child(n+4){grid-column:auto;height:270px;min-height:270px}.service-feature:nth-child(5){grid-column:1/-1;height:300px}.service-overlay{left:13px;right:10px;bottom:15px;gap:7px}.service-overlay small{font-size:8px;letter-spacing:.1em}.service-overlay strong{font-size:24px}.service-overlay i{font-size:8px;letter-spacing:.07em}}
 </style>
+<style>
+/* Compact, clearer footer with a fresh navy / warm ivory / muted gold palette */
+.premium-contact .compact-footer{margin-top:30px;padding:20px 0 0;border-top:1px solid rgba(201,164,112,.35);display:grid;grid-template-columns:minmax(210px,1.1fr) minmax(160px,1fr) auto;align-items:center;gap:15px 24px}
+.premium-contact .compact-footer .footer-brand{gap:10px;min-width:0}
+.premium-contact .compact-footer .footer-brand img{width:38px;height:38px;object-fit:contain;padding:2px;background:transparent;border-radius:0}
+.premium-contact .compact-footer .footer-brand-name{font-size:9px;line-height:1.3;letter-spacing:.1em;color:#f7f4ed}
+.premium-contact .compact-footer .footer-brand-name b{color:#d5ad77}
+.premium-contact .compact-footer .footer-brand-name small{font-size:6px;letter-spacing:.12em;color:#bfc5d0;margin-top:4px}
+.premium-contact .footer-signoff{margin:0;color:#d4d8df;font:italic 14px/1.4 Georgia,'Times New Roman',serif}
+.premium-contact .compact-footer .footer-links{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:13px;margin:0}
+.premium-contact .compact-footer .footer-links a{font-size:8px;letter-spacing:.1em;color:#d6d9df;transition:color .2s}
+.premium-contact .compact-footer .footer-links a:hover{color:#d5ad77}
+.premium-contact .compact-footer .footer-bottom{grid-column:1/-1;margin:0;padding-top:11px;border-top:1px solid rgba(255,255,255,.12);font-size:8px;letter-spacing:.035em;color:#aeb6c4;line-height:1.5}
+@media(max-width:760px){.premium-contact .compact-footer{grid-template-columns:1fr auto;gap:14px;padding-top:17px}.premium-contact .footer-signoff{grid-column:1/-1;grid-row:2;font-size:13px}.premium-contact .compact-footer .footer-links{grid-column:1/-1;justify-content:flex-start;gap:16px}.premium-contact .compact-footer .footer-bottom{grid-column:1/-1;gap:6px;flex-direction:column}.premium-contact .compact-footer .footer-brand img{width:34px;height:34px}}
+</style>
 </head>
 <body>
 <header class="nav premium-nav"><a class="brand pt-brand" href="#" aria-label="Painters and Textures home"><img class="header-pt-logo" src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures PT monogram"><span class="header-brand-name"><span>PAINTERS <b>&amp; TEXTURES</b></span><small>CRAFTED WALL FINISHES</small></span></a><nav id="nav"><a href="#services">Services</a><a href="#services">Our services</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">GET A QUOTE <span>↗</span></a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
@@ -661,11 +676,12 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
     </div>
   </div>
   <div class="footer-faq" id="faq"><div class="footer-faq-title"><span>QUICK ANSWERS</span><strong>FAQs</strong></div><div class="footer-faq-items"><details><summary>What is texture paint?</summary><p>Texture finishes add pattern, tactile detail or dimension. The result depends on the material, technique, lighting and colour.</p></details><details><summary>Can textures be used in every room?</summary><p>Suitability depends on the product and room conditions. We can help discuss the right finish for your surface.</p></details><details><summary>Should I test a sample first?</summary><p>Yes. Test it on the intended wall and view it in different lighting before choosing.</p></details><details><summary>What work do you undertake?</summary><p>We undertake all types of painting and texture work. Contact us to discuss your project.</p></details></div></div>
-  <div class="premium-footer">
-    <a class="footer-brand" href="#" aria-label="Painters and Textures home"><img src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures monogram logo" loading="lazy"><span class="footer-brand-name">PAINTERS <b>&amp; TEXTURES</b><small>CRAFTED WALL FINISHES</small></span></a>
-    <div class="footer-links"><a href="#textures">FINISHES</a><a href="#works">OUR WORKS</a><a href="#faq">FAQS</a></div>
-    <div class="footer-bottom"><span>Thoughtfully finished. Made to feel like home.</span><span>© <span id="footerYear">2026</span> Painters &amp; Textures</span></div>
-  </div>
+  <footer class="premium-footer compact-footer">
+    <a class="footer-brand" href="#" aria-label="Painters and Textures home"><img src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures monogram logo" loading="lazy"><span class="footer-brand-name">PAINTERS <b>&amp; TEXTURES</b><small>QUALITY FINISHES. LASTING IMPRESSIONS.</small></span></a>
+    <p class="footer-signoff">Beautiful walls begin with the right finish.</p>
+    <div class="footer-links"><a href="#services">SERVICES</a><a href="#process">OUR PROCESS</a><a href="#faq">FAQS</a><a href="#contact">CONTACT</a></div>
+    <div class="footer-bottom"><span>Painting · Textures · Wood finishes · Wall coverings</span><span>© <span id="footerYear">2026</span> Painters &amp; Textures</span></div>
+  </footer>
 </section>
 
 
