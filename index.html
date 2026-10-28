@@ -530,10 +530,33 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
+
+<style>
+/* Premium navy-and-gold header and single-footer branding */
+:root{--ink:#17294a;--rust:#b99362;--line:#e5dfd4;--paper:#fbf9f4}
+.premium-nav{position:relative;z-index:20;height:88px;padding:0 clamp(22px,6vw,96px);gap:28px;background:rgba(251,249,244,.97);border-bottom:1px solid #17294a18;box-shadow:0 5px 24px #17294a08;backdrop-filter:blur(12px)}
+.premium-nav .brand{gap:14px;flex-shrink:0}
+.premium-nav .brand-logo{display:block;width:54px;height:60px;object-fit:contain}
+.premium-nav .brand-name{display:flex;flex-direction:column;gap:4px;color:#17294a;font:600 12px/1.15 Arial,sans-serif;letter-spacing:.15em;white-space:nowrap}
+.premium-nav .brand-name b{font-weight:600;color:#b99362}
+.premium-nav .brand-name small{font-size:8px;letter-spacing:.18em;color:#77776d;font-weight:400;margin-top:3px}
+.premium-nav nav{align-items:center;gap:clamp(15px,2.2vw,32px);margin-left:auto}
+.premium-nav nav a{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#303c50;position:relative;padding:10px 0}
+.premium-nav nav a:after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:#b99362;transition:right .25s}
+.premium-nav nav a:hover{color:#17294a}.premium-nav nav a:hover:after{right:0}
+.premium-nav>.outline{display:inline-flex;align-items:center;gap:18px;padding:14px 17px;border:1px solid #17294a;color:#17294a;font-size:9px;letter-spacing:.12em;white-space:nowrap;transition:background .2s,color .2s}
+.premium-nav>.outline:hover{background:#17294a;color:#fff}.premium-nav>.outline span{color:#b99362}
+.premium-nav .menu{color:#17294a;border:1px solid #17294a22;padding:7px 10px}
+.premium-contact .footer-brand{gap:14px}.premium-contact .footer-brand img{width:52px;height:52px;object-fit:contain;display:block;background:#fff;border-radius:2px;padding:3px}
+.premium-contact .footer-brand-name{font-size:10px;letter-spacing:.13em}.premium-contact .footer-brand-name b{color:#b99362}.premium-contact .footer-brand-name small{font-size:7px;letter-spacing:.12em;color:#aaa99f}
+.premium-contact .footer-links{margin-top:0;justify-content:flex-end;gap:clamp(14px,2vw,28px)}
+.premium-contact .footer-bottom{align-items:center}
+@media(max-width:900px){.premium-nav{gap:14px;padding-inline:4%}.premium-nav .brand-logo{width:46px;height:52px}.premium-nav .brand-name{font-size:10px}.premium-nav nav{gap:14px}.premium-nav nav a{font-size:9px}.premium-nav>.outline{padding:12px;font-size:8px}}
+@media(max-width:760px){.premium-nav{height:74px;min-height:74px;padding:7px 5%;gap:10px}.premium-nav .brand{gap:9px}.premium-nav .brand-logo{width:39px;height:48px}.premium-nav .brand-name{font-size:9px;letter-spacing:.12em}.premium-nav .brand-name small{font-size:6px}.premium-nav nav{top:74px;left:0;right:0;padding:22px 6%;gap:18px;background:#fbf9f4;box-shadow:0 12px 20px #17294a12}.premium-nav nav a{font-size:11px}.premium-nav>.outline{display:none}.premium-nav .menu{display:block;font-size:22px}.premium-contact .footer-links{margin-top:20px;justify-content:flex-start}.premium-contact .footer-brand img{width:46px;height:46px}}
+</style>
 </head>
 <body>
-<div class="top">QUALITY FINISHES · LASTING IMPRESSIONS</div>
-<header class="nav"><a class="brand" href="#" aria-label="Painters and Textures home"><img class="brand-logo" src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/pt-logo.jpg" alt="Painters &amp; Textures logo"><span class="brand-name">Painters <b>&amp; Textures.</b></span></a><nav id="nav"><a href="#textures">Textures</a><a href="#inspiration">Inspiration</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">BOOK A CONSULTATION ↗</a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
+<header class="nav premium-nav"><a class="brand" href="#" aria-label="Painters and Textures home"><img class="brand-logo" src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures monogram logo"><span class="brand-name">PAINTERS <b>&amp; TEXTURES</b><small>CRAFTED WALL FINISHES</small></span></a><nav id="nav"><a href="#textures">Services</a><a href="#inspiration">Inspiration</a><a href="#process">Our process</a><a href="#faq">FAQs</a></nav><a class="outline" href="#contact">GET A QUOTE <span>↗</span></a><button class="menu" id="menu" aria-label="Toggle navigation">☰</button></header>
 <main>
 <section class="hero split-hero single-image-hero" aria-label="Painting and texture finishes">
   <img class="single-hero-image" src="/assets/images/pt-homepage-hero-4k.png" alt="Blue painted wall beside a warm golden textured wall in a refined living room" fetchpriority="high">
@@ -584,7 +607,7 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
   </div>
   <div class="footer-faq" id="faq"><div class="footer-faq-title"><span>QUICK ANSWERS</span><strong>FAQs</strong></div><div class="footer-faq-items"><details><summary>What is texture paint?</summary><p>Texture finishes add pattern, tactile detail or dimension. The result depends on the material, technique, lighting and colour.</p></details><details><summary>Can textures be used in every room?</summary><p>Suitability depends on the product and room conditions. We can help discuss the right finish for your surface.</p></details><details><summary>Should I test a sample first?</summary><p>Yes. Test it on the intended wall and view it in different lighting before choosing.</p></details><details><summary>What work do you undertake?</summary><p>We undertake all types of painting and texture work. Contact us to discuss your project.</p></details></div></div>
   <div class="premium-footer">
-    <a class="footer-brand" href="#"><span class="footer-monogram">P<span>&amp;</span>T</span><span class="footer-brand-name">PAINTERS <b>&amp; TEXTURES</b><small>QUALITY FINISHES. LASTING IMPRESSIONS.</small></span></a>
+    <a class="footer-brand" href="#" aria-label="Painters and Textures home"><img src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/Textured%20P%20and%20T%20Monogram%20Logo.png" alt="Painters &amp; Textures monogram logo" loading="lazy"><span class="footer-brand-name">PAINTERS <b>&amp; TEXTURES</b><small>CRAFTED WALL FINISHES</small></span></a>
     <div class="footer-links"><a href="#textures">FINISHES</a><a href="#inspiration">INSPIRATION</a><a href="#faq">FAQS</a></div>
     <div class="footer-bottom"><span>Thoughtfully finished. Made to feel like home.</span><span>© <span id="footerYear">2026</span> Painters &amp; Textures</span></div>
   </div>
@@ -610,12 +633,7 @@ h1,h2,h3,.head h2,.card h3,.room span{color:#17294a}
 </div>
 <button class="booking-fab" type="button" id="openBooking">BOOK / GET A QUOTE ↗</button>
 
-<footer class="site-footer">
-  <div class="footer-brand"><img src="https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/assets/images/pt-logo.jpg" alt="Painters &amp; Textures logo" loading="lazy"><div><strong>Painters <span>&amp; Textures</span></strong><p>Quality Finishes. Lasting Impressions.</p></div></div>
-  <div class="footer-links"><a href="#textures">Services</a><a href="#inspiration">Our work</a><a href="#process">Our process</a><a href="#faq">FAQs</a><a href="#contact">Get a quote ↗</a></div>
-  <div class="footer-contact"><a href="tel:+917026193396">7026193396</a><a href="mailto:paintersandtextures@gmail.com">paintersandtextures@gmail.com</a></div>
-  <div class="footer-bottom"><span>© <span id="footerYear">2026</span> Painters &amp; Textures</span><span>COLOURS THAT INSPIRE. FINISHES THAT LAST.</span></div>
-</footer>
+
 </main>
 <script>
 const nav=document.getElementById('nav');document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
