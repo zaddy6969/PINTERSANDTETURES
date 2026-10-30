@@ -930,11 +930,14 @@ document.getElementById('sendEmail').addEventListener('click',()=>{
 
 
 <style>
-#service-image-lightbox{display:none!important;position:fixed!important;inset:0!important;z-index:2147483647!important;background:rgba(3,6,12,.94)!important;align-items:center!important;justify-content:center!important;padding:3vh 3vw!important}
-#service-image-lightbox.is-open{display:flex!important}
-#service-image-lightbox .lightbox-panel{width:min(1100px,94vw)!important;max-height:94vh!important;background:#101319!important;color:#f5f1e9!important;border:1px solid #c9a470!important;border-radius:14px!important;overflow:hidden!important}
-#service-image-lightbox .lightbox-image-wrap{display:grid!important;place-items:center!important;padding:12px!important;max-height:calc(94vh - 70px)!important}
-#service-image-lightbox img{display:block!important;max-width:100%!important;max-height:calc(94vh - 100px)!important;width:auto!important;height:auto!important;object-fit:contain!important}
+#service-image-lightbox{display:none!important;position:fixed!important;inset:0!important;z-index:2147483647!important;background:transparent!important;backdrop-filter:none!important;align-items:center!important;justify-content:center!important;padding:3vh 3vw!important;pointer-events:none!important}
+#service-image-lightbox.is-open{display:flex!important;pointer-events:none!important}
+#service-image-lightbox .lightbox-panel{position:relative!important;width:min(1100px,94vw)!important;max-height:94vh!important;background:transparent!important;color:#fff!important;border:0!important;border-radius:14px!important;overflow:visible!important;box-shadow:0 12px 48px rgba(0,0,0,.32)!important;pointer-events:auto!important}
+#service-image-lightbox .lightbox-top{position:absolute!important;top:12px!important;right:12px!important;z-index:2!important;padding:0!important;border:0!important}
+#service-image-lightbox .lightbox-title{position:absolute!important;left:12px!important;top:12px!important;padding:9px 13px!important;border-radius:20px!important;background:rgba(15,25,42,.78)!important;color:#fff!important;backdrop-filter:blur(8px)!important}
+#service-image-lightbox .lightbox-close{background:rgba(15,25,42,.78)!important;backdrop-filter:blur(8px)!important}
+#service-image-lightbox .lightbox-image-wrap{display:grid!important;place-items:center!important;padding:0!important;max-height:94vh!important}
+#service-image-lightbox img{display:block!important;max-width:100%!important;max-height:94vh!important;width:auto!important;height:auto!important;object-fit:contain!important;border-radius:12px!important}
 </style>
 <script>
 window.openServiceImage=function(card){
