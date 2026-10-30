@@ -29,7 +29,7 @@
       "source": "/",
       "headers": [
         {"key":"Cache-Control","value":"public, max-age=60, s-maxage=300, stale-while-revalidate=86400"},
-        {"key":"Link","value":"</footer-fix.css>; rel=\"stylesheet\""}
+        {"key":"Link","value":"</footer-fix.css?v=3>; rel=\"stylesheet\""}
       ]
     }
   ]
