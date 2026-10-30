@@ -1,4 +1,4 @@
-export default async function handler(request) {
+export async function GET(request) {
   const sourceUrl = 'https://raw.githubusercontent.com/zaddy6969/PINTERSANDTETURES/main/index.html';
   const response = await fetch(sourceUrl, { cache: 'no-store' });
 
