@@ -884,6 +884,47 @@ document.getElementById('sendEmail').addEventListener('click',()=>{
 });
 
 </script>
+
+<style>
+#service-image-lightbox{width:min(94vw,1100px);max-width:1100px;max-height:92vh;padding:0;border:1px solid rgba(201,164,112,.55);border-radius:14px;background:#101319;color:#f5f1e9;overflow:hidden;box-shadow:0 24px 90px rgba(0,0,0,.65)}
+#service-image-lightbox::backdrop{background:rgba(3,6,12,.86);backdrop-filter:blur(5px)}
+#service-image-lightbox .lightbox-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.12)}
+#service-image-lightbox .lightbox-title{font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+#service-image-lightbox .lightbox-close{width:38px;height:38px;border:1px solid rgba(201,164,112,.55);border-radius:50%;background:transparent;color:#fff;font-size:24px;line-height:1;cursor:pointer}
+#service-image-lightbox .lightbox-image-wrap{display:grid;place-items:center;padding:12px;max-height:calc(92vh - 76px)}
+#service-image-lightbox img{display:block;max-width:100%;max-height:calc(92vh - 100px);width:auto;height:auto;object-fit:contain;border-radius:6px}
+.service-feature{cursor:zoom-in}
+@media(max-width:600px){#service-image-lightbox{width:96vw;border-radius:10px}#service-image-lightbox .lightbox-top{padding:12px 14px}#service-image-lightbox .lightbox-image-wrap{padding:8px}}
+</style>
+<dialog id="service-image-lightbox" aria-label="Service image preview">
+  <div class="lightbox-top"><span class="lightbox-title" id="service-image-lightbox-title"></span><button class="lightbox-close" type="button" aria-label="Close image preview">&times;</button></div>
+  <div class="lightbox-image-wrap"><img id="service-image-lightbox-img" alt=""></div>
+</dialog>
+<script>
+(() => {
+  const dialog = document.getElementById('service-image-lightbox');
+  if (!dialog) return;
+  const preview = document.getElementById('service-image-lightbox-img');
+  const title = document.getElementById('service-image-lightbox-title');
+  const close = dialog.querySelector('.lightbox-close');
+  document.querySelectorAll('.services-feature-grid .service-feature').forEach(card => {
+    card.addEventListener('click', event => {
+      const image = card.querySelector('img');
+      if (!image) return;
+      event.preventDefault();
+      preview.src = image.currentSrc || image.src;
+      preview.alt = image.alt || card.querySelector('strong')?.textContent || 'Service image';
+      title.textContent = card.querySelector('strong')?.textContent || 'Service image';
+      if (typeof dialog.showModal === 'function') dialog.showModal();
+    });
+  });
+  close.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) dialog.close();
+  });
+})();
+</script>
+
 </body></html>
 <style>
 .single-image-hero{height:calc(100vh - 89px);min-height:520px;padding:0!important;margin:0!important;display:block!important;position:relative;overflow:hidden;background:#14243d}
