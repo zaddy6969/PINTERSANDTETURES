@@ -1,5 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {"source":"/","destination":"/api/index"}
+  ],
   "headers": [
     {
       "source": "/robots.txt",
@@ -24,13 +27,6 @@
     {
       "source": "/(.*)\\.(svg|ico|webmanifest|css|js|woff2?)",
       "headers": [{"key":"Cache-Control","value":"public, max-age=31536000, immutable"}]
-    },
-    {
-      "source": "/",
-      "headers": [
-        {"key":"Cache-Control","value":"public, max-age=60, s-maxage=300, stale-while-revalidate=86400"},
-        {"key":"Link","value":"</footer-fix.css?v=4>; rel=\"stylesheet\""}
-      ]
     }
   ]
 }
