@@ -4,7 +4,7 @@
   "description": "Painters & Textures - Quality Finishes. Lasting Impressions.",
   "private": true,
   "scripts": {
-    "dev": "npx serve .",
+    "dev": "node scripts/dev.cjs",
     "build": "echo 'Static site - no build required'",
     "lint": "echo 'No linter configured'"
   },
