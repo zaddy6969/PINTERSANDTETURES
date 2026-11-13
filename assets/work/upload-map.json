@@ -1,0 +1,141 @@
+{
+  "photos": 27,
+  "uniquePhotos": 26,
+  "files": [
+    {
+      "sourceFile": "IMG-20241209-WA0054.jpg.jpeg",
+      "reference": "PT-027",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20250228-WA0072.jpg.jpeg",
+      "reference": "PT-017",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20250625-WA0058.jpg.jpeg",
+      "reference": "PT-007",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20250625-WA0061.jpg.jpeg",
+      "reference": "PT-015",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20250813-WA0015.jpg.jpeg",
+      "reference": "PT-004",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20250823-WA0065.jpeg",
+      "reference": "PT-010",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20250823-WA0095.jpeg",
+      "reference": "PT-003",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20250830-WA0068.jpg.jpeg",
+      "reference": "PT-022",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20250925-WA0047.jpg.jpeg",
+      "reference": "PT-019",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20251015-WA0017.jpeg",
+      "reference": "PT-005",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20251015-WA0033.jpeg",
+      "reference": "PT-016",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20251024-WA0028.jpg.jpeg",
+      "reference": "PT-023",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20251105-WA0001.jpg.jpeg",
+      "reference": "PT-006",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20251213-WA0024.jpeg",
+      "reference": "PT-001",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20251227-WA0020.jpeg",
+      "reference": "PT-025",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260223-WA0122.jpg.jpeg",
+      "reference": "PT-018",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260422-WA0028.jpg.jpeg",
+      "reference": "PT-021",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260529-WA0087.jpg.jpeg",
+      "reference": "PT-002",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260820-WA0052.jpeg",
+      "reference": "PT-020",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260921-WA0028(1).jpg.jpeg",
+      "reference": "PT-011",
+      "duplicate": true
+    },
+    {
+      "sourceFile": "IMG-20260921-WA0028.jpg.jpeg",
+      "reference": "PT-011",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260925-WA0037.jpg.jpeg",
+      "reference": "PT-009",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260925-WA0039.jpg.jpeg",
+      "reference": "PT-024",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260925-WA0044.jpg.jpeg",
+      "reference": "PT-012",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20260925-WA0047.jpg.jpeg",
+      "reference": "PT-008",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20261103-WA0047.jpg.jpeg",
+      "reference": "PT-026",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "IMG-20261103-WA0071.jpg.jpeg",
+      "reference": "PT-013",
+      "duplicate": false
+    }
+  ]
+}

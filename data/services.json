@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "interior-painting",
+    "name": "Interior painting",
+    "short": "Interiors",
+    "category": "painting",
+    "image": 3,
+    "heading": "Colour that feels<br>like home.",
+    "description": "A considered palette can change the way a room feels. Explore interior painting for bedrooms, living rooms and workspaces, from a quiet refresh to a playful accent.",
+    "points": [
+      "Room and full-home painting",
+      "Colour and finish selection",
+      "Surface preparation and repainting"
+    ],
+    "lead": "Fresh colour. A more personal space.",
+    "enquiry": "Interior painting"
+  },
+  {
+    "slug": "exterior-painting",
+    "name": "Exterior painting",
+    "short": "Exteriors",
+    "category": "exteriors",
+    "image": 10,
+    "heading": "A better first<br>impression.",
+    "description": "Bring a fresh perspective to the outside of your home. Discuss your existing surfaces, colour combinations and preparation needs before choosing the right finish.",
+    "points": [
+      "Residential exterior painting",
+      "Surface assessment and preparation",
+      "Facade colour combinations"
+    ],
+    "lead": "Thoughtful finishes, from the outside in.",
+    "enquiry": "Exterior painting"
+  },
+  {
+    "slug": "wall-textures",
+    "name": "Decorative textures",
+    "short": "Textures",
+    "category": "textures",
+    "image": 18,
+    "heading": "More depth.<br>More character.",
+    "description": "Marble-inspired veining, architectural stone effects, ornamental patterns and softly textured surfaces. Find a direction in our work and talk to us about bringing it to your space.",
+    "points": [
+      "Marble and stone-inspired effects",
+      "Ornamental and metallic finishes",
+      "Feature walls and subtle textures"
+    ],
+    "lead": "A surface worth a closer look.",
+    "enquiry": "Decorative textures"
+  },
+  {
+    "slug": "wall-art",
+    "name": "Wall art & murals",
+    "short": "Wall art",
+    "category": "artwork",
+    "image": 12,
+    "heading": "Your wall.<br>A work of art.",
+    "description": "Explore devotional scenes, tree-inspired compositions and sculptural wall features. Share a reference or an idea and discuss the style, scale and surface with our team.",
+    "points": [
+      "Decorative and devotional artwork",
+      "Tree and nature-inspired compositions",
+      "Dimensional wall features"
+    ],
+    "lead": "A personal statement, made part of the room.",
+    "enquiry": "Wall artwork"
+  },
+  {
+    "slug": "wood-finishes",
+    "name": "Wood finishes",
+    "short": "Wood finishes",
+    "category": null,
+    "image": null,
+    "heading": "Details that bring<br>a space together.",
+    "description": "Explore finishing options for doors, frames and wooden features. Share the existing surface and the appearance you have in mind so we can discuss a suitable approach.",
+    "points": [
+      "Doors, frames and wooden features",
+      "Finish and colour consultation",
+      "Refinishing options"
+    ],
+    "lead": "A considered finish for your wooden features.",
+    "enquiry": "Wood finishes"
+  },
+  {
+    "slug": "wallpaper",
+    "name": "Wallpaper",
+    "short": "Wallpaper",
+    "category": null,
+    "image": null,
+    "heading": "A fresh layer<br>of personality.",
+    "description": "Discuss wall coverings for a feature wall or a complete room. Bring a pattern you love, your wall measurements and photographs of the space to start the conversation.",
+    "points": [
+      "Feature walls and room schemes",
+      "Pattern and colour selection",
+      "Wall preparation and installation"
+    ],
+    "lead": "Pattern and colour, chosen around your room.",
+    "enquiry": "Wallpaper"
+  }
+]
