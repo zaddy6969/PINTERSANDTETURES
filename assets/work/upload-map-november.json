@@ -1,0 +1,120 @@
+{
+  "uploadedImages": 19,
+  "addedPhotos": 15,
+  "files": [
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 15.59.08 (1).jpeg",
+      "sourceSha256": "7b5f1d0756837cfd0c5b2ecc8d9405b269c39853566569941eca2aa115b9d5bd",
+      "excluded": true,
+      "reason": "Website reference screenshot"
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 15.59.08.jpeg",
+      "sourceSha256": "7b5f1d0756837cfd0c5b2ecc8d9405b269c39853566569941eca2aa115b9d5bd",
+      "excluded": true,
+      "reason": "Website reference screenshot"
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 16.48.36 (1).jpeg",
+      "sourceSha256": "dcc414f9936d187610ed83fafbe7e836259998f87daaba28b817b68515a9766d",
+      "reference": "PT-030",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 16.48.36.jpeg",
+      "sourceSha256": "cb042c999025bc65724b7a7ce4f447d94d82a107eb43c34846bfb8d281c9d702",
+      "reference": "PT-041",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 16.48.37 (2).jpeg",
+      "sourceSha256": "47973659f2e615b5acaf6a32820c2d697cc9cbe9a2a0289a34c34135162592a7",
+      "reference": "PT-028",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 16.48.37 (3).jpeg",
+      "sourceSha256": "47973659f2e615b5acaf6a32820c2d697cc9cbe9a2a0289a34c34135162592a7",
+      "reference": "PT-028",
+      "duplicate": true
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.00.31.jpeg",
+      "sourceSha256": "b15a9326e7459bad11202817cd7e357adc89fd3ac7e60f3eca0d116fcaaae475",
+      "reference": "PT-036",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.00.37.jpeg",
+      "sourceSha256": "dcee87f712e35e8d0307c71f14568ca43f4db551541d564ffb856d36502d7dfb",
+      "reference": "PT-037",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.00.52.jpeg",
+      "sourceSha256": "720b36993edad4f3146f3171d6d761ec53c3bbbe43c9f838d6606c172bbc3c30",
+      "reference": "PT-042",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.00.54.jpeg",
+      "sourceSha256": "94775ff91ae4dbd0861f3cdfeb2ca625b36eb3e6fe20b37c73944d142b212148",
+      "reference": "PT-038",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.00.55.jpeg",
+      "sourceSha256": "b74e83d68a923ffe09a48d69c35ff1c6e06007e1fdacbc4fc89b84ca88f53927",
+      "reference": "PT-035",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.00.58.jpeg",
+      "sourceSha256": "3987ea5f26553e87661fcd4ddcaeb89a0d49eb9af75003e9e17b538cdbe025e2",
+      "reference": "PT-034",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.01.00.jpeg",
+      "sourceSha256": "e135dfca18d8a06517bfb3b19df0724ea719842f366f0f602fa099606075ae0e",
+      "reference": "PT-039",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.01.01 (1).jpeg",
+      "sourceSha256": "a660c01e7fe2c6935132677e74d24102600699bce749050d27f1b47f252ec1ca",
+      "reference": "PT-033",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.01.01.jpeg",
+      "sourceSha256": "a660c01e7fe2c6935132677e74d24102600699bce749050d27f1b47f252ec1ca",
+      "reference": "PT-033",
+      "duplicate": true
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.01.03.jpeg",
+      "sourceSha256": "ce44835f65988ba5b3fbde12aa0d54fc7e5d52fc65a0f9a6ab1750d8be1e36dc",
+      "reference": "PT-040",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.01.05.jpeg",
+      "sourceSha256": "3e69898149fc3056a3a45c700cf7e60aee1cfaa89f09d6e5db8298f25e03e7fe",
+      "reference": "PT-029",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.01.12.jpeg",
+      "sourceSha256": "b666818d8fffcbf58b20dfc5f3df34c8dab73ba6a3c7dc0d6cccbf34b6954757",
+      "reference": "PT-032",
+      "duplicate": false
+    },
+    {
+      "sourceFile": "WhatsApp Image 2026-11-05 at 17.01.18.jpeg",
+      "sourceSha256": "3512c4c64809ecec7d7f905d8cbf2a541ae91fd0fc489727d8a8fdc9f9698436",
+      "reference": "PT-031",
+      "duplicate": false
+    }
+  ]
+}

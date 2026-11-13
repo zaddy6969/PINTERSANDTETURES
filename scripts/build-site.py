@@ -4,6 +4,7 @@ import json,html
 ROOT=Path(__file__).resolve().parent.parent
 DATA=json.loads((ROOT/'assets/work/projects.json').read_text())
 P={p['id']:p for p in DATA}
+PHOTO_COUNT=len(DATA)
 VER='20261113'
 ARROW='<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg>'
 SERVICES=[
@@ -16,7 +17,7 @@ SERVICES=[
 ]
 S={s['slug']:s for s in SERVICES}
 STYLES={'marble':'Marble effects','stone':'Stone & concrete','pattern':'Patterned finishes','subtle':'Subtle textures','metallic':'Gold details','special':'Sculptural textures'}
-ORDER=[18,12,10,17,3,25,21,24,20,23,26,6,0,2,7,8,11,1,14,15,16,19,22,5,9,4]
+ORDER=[27,28,39,29,38,30,31,40,41,32,34,35,36,37,33,18,12,10,17,3,25,21,24,20,23,26,6,0,2,7,8,11,1,14,15,16,19,22,5,9,4]
 def e(x):return html.escape(str(x),quote=True)
 def image(i,eager=False,cls='',thumb=False):
  p=P[i];src=p['thumbnail'] if thumb else p['src']
@@ -51,11 +52,11 @@ def page(title,description,body,path='/'):
 def write(path,text):
  p=ROOT/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
 # Homepage: keep the established branding; make the work and services easier to explore.
-home=(ROOT/'templates/home-hero.html').read_text().replace('<span>WALLPAPER</span>','<span>WALL ART & MURALS</span>')
+home=(ROOT/'templates/home-hero.html').read_text().replace('01 / 26', f'01 / {PHOTO_COUNT}').replace('<span>WALLPAPER</span>','<span>WALL ART & MURALS</span>')
 home+='''<section class="section offerings-section" id="services"><div class="section-heading"><div><p class="eyebrow">01 — OUR SERVICES</p><h2>Different surfaces.<br><em>The same attention to detail.</em></h2></div><a class="text-link" href="/services/">Explore all services '''+ARROW+'''</a></div><div class="offering-grid">'''+''.join(service_card(S[k],n+1) for n,k in enumerate(['wall-textures','interior-painting','exterior-painting','wall-art']))+'</div><div class="additional-services">'+consult_card(S['wood-finishes'])+consult_card(S['wallpaper'])+'</div></section>'
-home+='<section class="section selected-section" id="work"><div class="section-heading"><div><p class="eyebrow">02 — A CLOSER LOOK AT OUR WORK</p><h2>The details make<br><em>the difference.</em></h2></div><div><p>Real photographs. Real surfaces.<br>Explore a finish from every angle.</p><a href="/projects/" class="text-link">Browse all 26 photographs '+ARROW+'</a></div></div>'+gallery([18,17,12,10,3,25])+'</section>'
+home+='<section class="section selected-section" id="work"><div class="section-heading"><div><p class="eyebrow">02 — A CLOSER LOOK AT OUR WORK</p><h2>The details make<br><em>the difference.</em></h2></div><div><p>Real photographs. Real surfaces.<br>Explore a finish from every angle.</p><a href="/projects/" class="text-link">Browse all '+str(PHOTO_COUNT)+' photographs '+ARROW+'</a></div></div>'+gallery([27,28,39,10,38,29])+'</section>'
 home+=(ROOT/'templates/home-approach.html').read_text()
-write('index.html',page('Painting & Decorative Wall Finishes in Bengaluru','Explore our painting, wall textures and murals in Bengaluru. Browse 26 project photographs by service and discuss your space.',home))
+write('index.html',page('Painting & Decorative Wall Finishes in Bengaluru','Explore our painting, wall textures and murals in Bengaluru. Browse '+str(PHOTO_COUNT)+' project photographs by service and discuss your space.',home))
 # Service directory.
 body='<section class="section directory-intro"><p class="eyebrow">PAINTERS & TEXTURES / OUR SERVICES</p><h1>Find the finish<br><em>that feels like you.</em></h1><p>From a complete repaint to one remarkable wall. Explore the possibilities for your home or workspace.</p></section><section class="section directory-list"><div class="offering-grid">'+''.join(service_card(s,i+1) for i,s in enumerate(SERVICES[:4]))+'</div><div class="additional-services">'+''.join(consult_card(s) for s in SERVICES[4:])+'</div></section>'+cta()
 write('services/index.html',page('Our Services','Interior painting, exterior painting, decorative wall textures, murals, wood finishes and wallpaper in Bengaluru.',body,'/services/'))
@@ -73,8 +74,8 @@ for n,s in enumerate(SERVICES):
  body+=cta(s['enquiry'])
  body+='<section class="related-services section"><p class="eyebrow">KEEP EXPLORING</p><div class="related-links">'+''.join(f'<a href="/services/{other["slug"]}/">{other["name"]} {ARROW}</a>' for other in SERVICES if other['slug']!=slug)+'</div></section>'
  write(f'services/{slug}/index.html',page(s['name']+' in Bengaluru',s['description'],body,f'/services/{slug}/'))
-body='<section class="section portfolio-intro"><div><p class="eyebrow">THE PROJECT GALLERY</p><h1>Craft you can see.<br><em>Character you can feel.</em></h1><p>Explore our painting, decorative finishes and wall art. Every photograph is a starting point for a conversation about your space.</p></div><div class="gallery-stamp"><strong>26</strong><span>PROJECT PHOTOGRAPHS</span></div></section><section class="section portfolio-section">'+gallery(ORDER,'service')+'</section>'+cta()
-write('projects/index.html',page('Project Gallery','Explore 26 project photographs by service: interior painting, exteriors, decorative wall textures and wall art.',body,'/projects/'))
+body='<section class="section portfolio-intro"><div><p class="eyebrow">THE PROJECT GALLERY</p><h1>Craft you can see.<br><em>Character you can feel.</em></h1><p>Explore our painting, decorative finishes and wall art. Every photograph is a starting point for a conversation about your space.</p></div><div class="gallery-stamp"><strong>'+str(PHOTO_COUNT)+'</strong><span>PROJECT PHOTOGRAPHS</span></div></section><section class="section portfolio-section">'+gallery(ORDER,'service')+'</section>'+cta()
+write('projects/index.html',page('Project Gallery','Explore '+str(PHOTO_COUNT)+' project photographs by service: interior painting, exteriors, decorative wall textures and wall art.',body,'/projects/'))
 write('404.html',page('Page not found','Explore Painters & Textures services and project photographs.','<section class="section directory-intro"><p class="eyebrow">404 / PAGE NOT FOUND</p><h1>Let’s find a<br>better direction.</h1><p>This page may have moved.</p><a class="button" href="/">Back to home '+ARROW+'</a></section>'))
 urls=['/','/services/','/projects/']+[f'/services/{s["slug"]}/' for s in SERVICES]
 write('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://paintersandtextures.com{p}</loc></url>' for p in urls)+'</urlset>')
