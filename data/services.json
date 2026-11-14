@@ -13,7 +13,8 @@
       "Surface preparation and repainting"
     ],
     "lead": "Fresh colour. A more personal space.",
-    "enquiry": "Interior painting"
+    "enquiry": "Interior painting",
+    "summary": "Fresh colour for your home or workspace."
   },
   {
     "slug": "exterior-painting",
@@ -29,7 +30,8 @@
       "Facade colour combinations"
     ],
     "lead": "Thoughtful finishes, from the outside in.",
-    "enquiry": "Exterior painting"
+    "enquiry": "Exterior painting",
+    "summary": "A fresh, well-finished exterior."
   },
   {
     "slug": "wall-textures",
@@ -45,7 +47,8 @@
       "Feature walls and subtle textures"
     ],
     "lead": "A surface worth a closer look.",
-    "enquiry": "Decorative textures"
+    "enquiry": "Decorative textures",
+    "summary": "Marble effects, subtle textures and decorative patterns."
   },
   {
     "slug": "wall-art",
@@ -61,7 +64,8 @@
       "Dimensional wall features"
     ],
     "lead": "A personal statement, made part of the room.",
-    "enquiry": "Wall artwork"
+    "enquiry": "Wall artwork",
+    "summary": "Murals, stencils and sculptural wall features."
   },
   {
     "slug": "wood-finishes",
@@ -77,7 +81,8 @@
       "Refinishing options"
     ],
     "lead": "A considered finish for your wooden features.",
-    "enquiry": "Wood finishes"
+    "enquiry": "Wood finishes",
+    "summary": "Finishing options for doors, frames and wooden details."
   },
   {
     "slug": "wallpaper",
@@ -93,6 +98,7 @@
       "Wall preparation and installation"
     ],
     "lead": "Pattern and colour, chosen around your room.",
-    "enquiry": "Wallpaper"
+    "enquiry": "Wallpaper",
+    "summary": "Patterns and wall coverings to suit your room."
   }
 ]
